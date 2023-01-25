@@ -46,7 +46,7 @@ TEST := executable
 TESTS_SOURCE_DIRECTORY:= tests
 TESTS_DIRECTORY_OBJECTS := temp_test_obj_directory
 TOBJS :=$(addprefix $(TESTS_DIRECTORY_OBJECTS)/, test_addition.o test_subtraction.o driver.o)
-LIBS := -lcppunit -lsubunit -lm $(LIB)
+LIBS := -lcppunit -lm $(LIB)
 
 # build the library
 build: clean $(LIB)
