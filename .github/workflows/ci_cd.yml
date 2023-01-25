@@ -17,11 +17,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       
-      - name: Load development configuration
-        uses: cardinalby/export-env-action@v1
-        with:
-          envFile: 'development.env'    
-          expand: 'true'
+      - name: Set deployment to development
+        run: echo "DEPLOYMENT=development" >> $GITHUB_ENV
 
       - name: Install cppunit
         run: sudo apt install -y libcppunit-dev
@@ -35,11 +32,8 @@ jobs:
       - name: Run the tests
         run: ./executable
 
-      - name: Load production configuration
-        uses: cardinalby/export-env-action@v1
-        with:
-          envFile: 'production.env'    
-          expand: 'true'
+      - name: Set deployment to production
+        run: echo "DEPLOYMENT=production" >> $GITHUB_ENV
 
       - name: Build the library
         run: make build
