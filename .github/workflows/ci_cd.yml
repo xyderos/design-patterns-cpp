@@ -27,7 +27,7 @@ jobs:
         run: sudo apt install -y libcppunit-dev
       
       - name: Export path to LD_LIBRARY_PATH
-        run: source export_library.sh 
+        run: export LD_LIBRARY_PATH=$(pwd)$LD_LIBRARY_PATH
       
       - name: Build the library
         run: make test
