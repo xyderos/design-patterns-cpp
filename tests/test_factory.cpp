@@ -11,6 +11,8 @@ TestFactory::test_factory_with_orange_input_should_generate_an_orange(void)
 	std::string expected = "orange";
 
 	CPPUNIT_ASSERT_EQUAL(expected, generator->use_the_generator());
+
+	delete generator;
 }
 
 void
@@ -21,4 +23,6 @@ TestFactory::test_factory_with_apple_input_should_generate_an_apple(void)
 	std::string expected = "apple";
 
 	CPPUNIT_ASSERT_EQUAL(expected, generator->use_the_generator());
+
+	delete generator;
 }
