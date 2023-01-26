@@ -4,7 +4,7 @@
 #include "../src/apple_generator.h"
 
 void
-TestFactory::test_factory_with_orange_input_should_generate_an_orange(void)
+test_factory::test_factory_with_orange_input_should_generate_an_orange(void)
 {
 	orange_generator* generator = new orange_generator();
 
@@ -16,7 +16,7 @@ TestFactory::test_factory_with_orange_input_should_generate_an_orange(void)
 }
 
 void
-TestFactory::test_factory_with_apple_input_should_generate_an_apple(void)
+test_factory::test_factory_with_apple_input_should_generate_an_apple(void)
 {
 	apple_generator* generator = new apple_generator();
 

@@ -1,9 +1,9 @@
 #include <cppunit/extensions/HelperMacros.h>
 
-class TestFactory : public CPPUNIT_NS::TestCase {
+class test_factory : public CPPUNIT_NS::TestCase {
 
     private:
-	CPPUNIT_TEST_SUITE(TestFactory);
+	CPPUNIT_TEST_SUITE(test_factory);
 	CPPUNIT_TEST(test_factory_with_orange_input_should_generate_an_orange);
 	CPPUNIT_TEST(test_factory_with_apple_input_should_generate_an_apple);
 	CPPUNIT_TEST_SUITE_END();
@@ -17,4 +17,4 @@ class TestFactory : public CPPUNIT_NS::TestCase {
 	void test_factory_with_apple_input_should_generate_an_apple(void);
 };
 
-CPPUNIT_TEST_SUITE_REGISTRATION(TestFactory);
+CPPUNIT_TEST_SUITE_REGISTRATION(test_factory);
