@@ -1,14 +1,8 @@
 name: ci/cd
 
 on:
-  pull_request:
-    branches:
-      - master
-      - development
   push:
-    branches:
-      - master
-      - development
+
 jobs:
   health-check-job:
     runs-on: ubuntu-latest
