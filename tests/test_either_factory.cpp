@@ -17,6 +17,10 @@ test_either_factory::
 
 	CPPUNIT_ASSERT_EQUAL(expected_car, s->to_string());
 	CPPUNIT_ASSERT_EQUAL(expected_truck, t->to_string());
+
+	delete t;
+	delete s;
+	delete ef;
 }
 
 void
@@ -30,4 +34,8 @@ test_either_factory::
 	const std::string expected_combination = "scania x saab";
 
 	CPPUNIT_ASSERT_EQUAL(expected_combination, t->what_am_I_carrying(*s));
+
+	delete t;
+	delete s;
+	delete ef;
 }
