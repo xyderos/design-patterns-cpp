@@ -81,7 +81,7 @@ test_lib_dirs:
 	mkdir -p $(TESTS_DIRECTORY_OBJECTS);
 
 clean:
-	rm -f *~ *.o $(LIB) $(TEST)
+	rm -f *~ *.o $(LIB) $(TEST) $(MEM_CHECK_FILE)
 	rm -rf $(LIBRARY_OBJECTS_DIRECTORY) $(TESTS_DIRECTORY_OBJECTS)
 
 memory_check: test

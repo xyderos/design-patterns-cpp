@@ -44,6 +44,7 @@ car *
 volvo_builder::get_car()
 {
     auto *to_return = this->volvo;
+    // try resetting since we want to make it reusable
     this->reset();
     return to_return;
 }
