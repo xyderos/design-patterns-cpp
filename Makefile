@@ -48,6 +48,8 @@ TESTS_DIRECTORY_OBJECTS := temp_test_obj_directory
 TOBJS :=$(addprefix $(TESTS_DIRECTORY_OBJECTS)/, test_addition.o test_subtraction.o driver.o)
 LIBS := -lcppunit -lm $(LIB)
 
+MEM_CHECK_FILE := valgrind_results.txt
+
 # build the library
 build: clean $(LIB)
 
@@ -79,5 +81,8 @@ test_lib_dirs:
 	mkdir -p $(TESTS_DIRECTORY_OBJECTS);
 
 clean:
-	rm -f *~ *.o $(LIB) $(TEST)
+	rm -f *~ *.o $(LIB) $(TEST) $(MEM_CHECK_FILE)
 	rm -rf $(LIBRARY_OBJECTS_DIRECTORY) $(TESTS_DIRECTORY_OBJECTS)
+
+memory_check: test
+	valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes --verbose --log-file=$(MEM_CHECK_FILE) ./$(TEST)
