@@ -38,14 +38,14 @@ HEADER_SUFFIX := .h
 LIB := libmod.so
 LIBRARY_SOURCE_DIRECTORY := src
 LIBRARY_OBJECTS_DIRECTORY := temp_obj_directory
-LIBRARY_OBJECTS :=$(addprefix $(LIBRARY_OBJECTS_DIRECTORY)/, addition.o subtraction.o)
+LIBRARY_OBJECTS :=$(addprefix $(LIBRARY_OBJECTS_DIRECTORY)/, singleton.o)
 SHARED := -shared
 
 # tests
 TEST := executable
 TESTS_SOURCE_DIRECTORY:= tests
 TESTS_DIRECTORY_OBJECTS := temp_test_obj_directory
-TOBJS :=$(addprefix $(TESTS_DIRECTORY_OBJECTS)/, test_addition.o test_subtraction.o driver.o)
+TOBJS :=$(addprefix $(TESTS_DIRECTORY_OBJECTS)/, test_singleton.o driver.o)
 LIBS := -lcppunit -lm $(LIB)
 
 MEM_CHECK_FILE := valgrind_results.txt
