@@ -1,4 +1,4 @@
-CXX := $(shell which clang++-14)
+CXX := $(shell which g++)
 
 # just a clean way to distinguish the two deployment environments
 DEVELOPMENT_FLAGS := -g -Wall -Weffc++ -pedantic \
