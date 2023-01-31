@@ -1,4 +1,4 @@
-CXX := $(shell which g++)
+CXX := $(shell which clang++-14)
 
 # just a clean way to distinguish the two deployment environments
 DEVELOPMENT_FLAGS := -g -Wall -Weffc++ -pedantic \
@@ -9,8 +9,7 @@ DEVELOPMENT_FLAGS := -g -Wall -Weffc++ -pedantic \
     -Wformat-nonliteral -Wformat-security \
     -Wformat-y2k \
     -Wimport -Winit-self -Winline \
-    -Winvalid-pch \
-    -Wunsafe-loop-optimizations -Wlong-long -Wmissing-braces \
+    -Winvalid-pch -Wlong-long -Wmissing-braces \
     -Wmissing-field-initializers -Wmissing-format-attribute \
     -Wmissing-include-dirs -Wmissing-noreturn \
     -Wpacked -Wparentheses -Wpointer-arith \
@@ -38,14 +37,14 @@ HEADER_SUFFIX := .h
 LIB := libmod.so
 LIBRARY_SOURCE_DIRECTORY := src
 LIBRARY_OBJECTS_DIRECTORY := temp_obj_directory
-LIBRARY_OBJECTS :=$(addprefix $(LIBRARY_OBJECTS_DIRECTORY)/, addition.o subtraction.o)
+LIBRARY_OBJECTS :=$(addprefix $(LIBRARY_OBJECTS_DIRECTORY)/, target.o adapter.o not_adapted.o )
 SHARED := -shared
 
 # tests
 TEST := executable
 TESTS_SOURCE_DIRECTORY:= tests
 TESTS_DIRECTORY_OBJECTS := temp_test_obj_directory
-TOBJS :=$(addprefix $(TESTS_DIRECTORY_OBJECTS)/, test_addition.o test_subtraction.o driver.o)
+TOBJS :=$(addprefix $(TESTS_DIRECTORY_OBJECTS)/, test_adapter.o driver.o)
 LIBS := -lcppunit -lm $(LIB)
 
 MEM_CHECK_FILE := valgrind_results.txt
