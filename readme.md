@@ -2,6 +2,10 @@
 
 Generate objects from a superclass via an interface in order to provide flexibility
 
+## Issue
+
+* You want to add extensibility but you are coupled with the class code
+
 ## Reasoning
 
 Replace direct construction via the **use_the_generator** member function (src/factory.h).
@@ -13,4 +17,16 @@ The generator (either orange or fruit) will inherit the parent member function a
 
 * Extend the internal components by inheritance.
 
+* Save resources by resusing extisting objects instead of creating new ones
 
+## Pros
+
+* No tight coupling
+
+* __Single Responsibility Principle__, move the code creation to one place
+
+* __Open/Closed Principle__, introduce new types of products without breaking the existing client code
+
+## Cons
+
+* Might become too complicated since you might need to introduce too many sub classes
