@@ -3,26 +3,16 @@
     "tasks": 
     [
       {
-        "label": "build",
+        "label": "Test",
         "type": "shell",
         "command": "make",
+        "args": [
+            "test"
+        ],
         "group": {
           "kind": "build",
           "isDefault": true
         }
-      },
-      {
-        "label": "enviroment",
-        "type": "shell",
-        "command": "source",
-        "args": ["~/.bashrc"],
-      },
-      {
-      "label": "Build",
-        "dependsOn": [
-            "environment",
-            "build"
-        ]
       }
     ]
   }
