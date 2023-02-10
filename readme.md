@@ -44,3 +44,13 @@ The prototype pattern lets you use a sert of pre-built objects configured in var
 ## Cons
 
 * Circular references are trickier to solve
+
+## Things to consider
+
+* You often come here from a factory
+
+* Ycan either use factory methods or prototypes to build the sets of objects
+
+* If you use composite or a decorator, prototype is super useful since you can clone complex objects instead of  re-constructing them
+
+* Can be implemented as a singleton
