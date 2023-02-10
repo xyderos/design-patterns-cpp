@@ -30,3 +30,11 @@ The generator (either orange or fruit) will inherit the parent member function a
 ## Cons
 
 * Might become too complicated since you might need to introduce too many sub classes
+
+## Things to consider
+
+* You often start with a factory, then you usually end up with abstract factory, prototype or builders
+
+* Abstract factory often encapsulates factory methods
+
+* Prototype requires complex initialization step since it doesnt involve inheritance, whereas we are dependent on inheritance but not coupled to initialization
