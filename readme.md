@@ -43,3 +43,11 @@ One object has a reference to another and it delegates the work
 * Depends on the order of the decorators stack
 
 * Initial configuration is ugly
+
+## Things to consider
+
+* Adapter gives a different interface, proxy uses the same, decorator enhances it
+
+* Can use prototype to avoid reconstructing
+
+* Proxy moves the workload somewhere else, decorator lets it be controlled by the client
