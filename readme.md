@@ -44,3 +44,15 @@ Hides a lot of implementation details from the client code
 ## Cons
 
 * The complexity increases as long as we add more classes
+
+## Things to consider
+
+* You usually come here from factories
+
+* In contrast with an abstract factory, you build objects step by step
+
+*  Use builder in conjunction with a composite because you can program the construction steps to work recursively
+
+* Combine builder with bridge, the director is the abstraction while builders are the implementation
+
+* Can be implemented as singleton
