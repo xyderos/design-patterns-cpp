@@ -53,3 +53,11 @@ Much stricter control over global and shared resources
 * Facades are usually converted to singletons, a single facade is usually enough
 
 * Factory could be a singleton if there was a notion of inheritance and you would be returning immutable objects instead of a single mutable object
+
+## Things to consider
+
+* Bridge is designed before hand, adaper is usually an "addon"
+
+* Adapter changes the interface, decorator enchances it
+
+* Facade defines a new interface, adapter tries to make it usable
