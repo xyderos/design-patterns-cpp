@@ -37,3 +37,9 @@ Since the bigger it becomes, the more difficult to control, you might have to up
 ## Cons
 
 * More complicated code if a class is dependent to a lot of other classes
+
+## Things to consider
+
+* Combine with an abstract factory, abstractions are defined b the bridge, implementations reside in the factory
+
+* Combine with builder, the director is the abstraction, the builders are the implementations
