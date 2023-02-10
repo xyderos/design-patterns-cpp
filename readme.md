@@ -31,3 +31,11 @@ Consider a simulation of eg the universe that each entity eg star, planet is an 
 1) Might introduce CPU overhead
 
 2) Code is complicated and ugly
+
+## Things to consider
+
+* Implement shared leaf nodes in a composite structure as flyweights, save more memory
+
+* Flyweight returns small objects, facade returns object that represents a subsystem
+
+* Do not mix with singleton, singleton would put all the shared states into a single object, flyweight keeps different instances plus flyweight instances are immutable, whereas singleton is mutable
