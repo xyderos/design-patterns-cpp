@@ -31,3 +31,11 @@
 ## Cons
 
 * Quite too complex to provide a common interface for classes that differ too much
+
+## Things to consider
+
+* Use with a builder, the builders can build various leaves
+
+* Can also implement leaves as as flyweights to reduce ram usage
+
+* Use prototype to clone, avoid the extra overhead of re constructing
