@@ -33,3 +33,15 @@ Explicitly declare interfaces **for each product and group**. Then declare **the
 ## Cons
 
 * Might become too complicated since we might need to introduce too many interface for a specific pattern
+
+## Things to consider
+
+* You often end up from an abstract factory
+
+* You initialize families of similar objetcs
+
+* Altough you usually use factory methods, you can also use prototype to compose components of these objects
+
+* Alternative to facade when you want to abstract the initialization process from client code
+
+* Use in conjunction with a bridge. When specific abstractions work with specific implementatios, you can encapsulate these relations to hide the complexity
