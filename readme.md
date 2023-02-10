@@ -25,3 +25,13 @@
 ## Cons
 
 * Can become super bloated with all the classes of the program
+
+## Things to consider
+
+* Defines a new interface for the object
+
+* Factory can be an alternative to facade when you want to hide the implementation
+
+* Can be converted to singleton since one facade is usually enough
+
+* Similar to proxy, but proxy has the same interface so it makes them interchangeable
