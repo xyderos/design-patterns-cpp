@@ -47,3 +47,9 @@ Much stricter control over global and shared resources
 * What happens if multiple threads try to create a singleton for the first time?
 
 * Difficult to unit test (check the way I test it, it is implicit that I need a global variable)
+
+## Things to consider
+
+* Facades are usually converted to singletons, a single facade is usually enough
+
+* Factory could be a singleton if there was a notion of inheritance and you would be returning immutable objects instead of a single mutable object
