@@ -2,10 +2,8 @@
 
 #include <string>
 
-class component
-{
+class component {
     public:
-
-    virtual ~component();
-    virtual std::string message() const = 0;
+	virtual ~component();
+	virtual std::string message() const = 0;
 };

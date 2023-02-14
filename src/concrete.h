@@ -2,11 +2,8 @@
 
 #include "component.h"
 
-class concrete : public component
-{
+class concrete : public component {
 
-public:
-
-    std::string message() const override;
-
+    public:
+	std::string message() const override;
 };

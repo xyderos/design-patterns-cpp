@@ -2,19 +2,15 @@
 
 #include "component.h"
 
-class decorator : public component
-{
+class decorator : public component {
 
     protected:
-    component * comp;
+	component *comp;
 
     public:
+	decorator(component *);
+	decorator(const decorator &);
+	decorator &operator=(const decorator &);
 
-    decorator(component *);
-    decorator(const decorator&);
-    decorator& operator=(const decorator&);
-
-    std::string message() const override;
-
-
+	std::string message() const override;
 };

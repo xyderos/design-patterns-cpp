@@ -9,7 +9,7 @@
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
-            "preLaunchTask": "Build",
+            "preLaunchTask": "build",
             "externalConsole": true,
             "MIMode": "gdb",
             "setupCommands": [
