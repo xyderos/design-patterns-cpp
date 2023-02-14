@@ -2,10 +2,8 @@
 
 #include <string>
 
-class interface
-{
+class interface {
     public:
-
-    virtual std::string common() const = 0;
-    virtual ~interface() = default;
+	virtual std::string common() const = 0;
+	virtual ~interface() = default;
 };

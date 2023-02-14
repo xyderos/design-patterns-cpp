@@ -1,5 +1,5 @@
-#include "../src/real.h"
 #include "../src/fake.h"
+#include "../src/real.h"
 #include "test_proxy.h"
 
 void

@@ -1,29 +1,39 @@
 #include "fake.h"
 
-std::string fake::log() const
+std::string
+fake::log() const
 {
-    return "log";
+	return "log";
 };
 
-fake::fake(real* rl) : r(rl){}
-
-fake::fake(const fake& f) : r(f.r){}
-
-fake& fake::operator=(const fake& rhs)
+fake::fake(real *rl)
+    : r(rl)
 {
-    if(this == &rhs) return *this;
+}
 
-    this->r = rhs.r;
+fake::fake(const fake &f)
+    : r(f.r)
+{
+}
 
-    return *this;
+fake &
+fake::operator=(const fake &rhs)
+{
+	if (this == &rhs)
+		return *this;
+
+	this->r = rhs.r;
+
+	return *this;
 }
 
 fake::~fake()
 {
-    delete r;
+	delete r;
 }
 
-std::string fake::common() const
+std::string
+fake::common() const
 {
-    return "fakex" + this->r->common();
+	return "fakex" + this->r->common();
 }

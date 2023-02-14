@@ -2,9 +2,7 @@
 
 #include "interface.h"
 
-class real : public interface
-{
+class real : public interface {
     public:
-
-    std::string common() const override;
+	std::string common() const override;
 };
