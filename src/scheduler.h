@@ -2,10 +2,8 @@
 
 #include <string>
 
-class scheduler
-{
+class scheduler {
     public:
-
-    std::string before() const;
-    std::string after() const;
+	std::string before() const;
+	std::string after() const;
 };
