@@ -9,6 +9,6 @@ scania::to_string() const
 std::string
 scania::what_am_I_carrying(const car &cargo) const
 {
-    const std::string result = cargo.to_string();
-    return "scania x " + result;
+	const std::string result = cargo.to_string();
+	return "scania x " + result;
 }

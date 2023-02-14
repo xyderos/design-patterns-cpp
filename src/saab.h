@@ -1,7 +1,6 @@
 #include "car.h"
 
-class saab : public car
-{
+class saab : public car {
     public:
-    std::string to_string() const override;
+	std::string to_string() const override;
 };

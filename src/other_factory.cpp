@@ -1,5 +1,5 @@
-#include "other_factory.h"
 #include "man.h"
+#include "other_factory.h"
 #include "volvo.h"
 
 car *

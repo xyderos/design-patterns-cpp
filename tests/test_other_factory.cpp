@@ -2,8 +2,7 @@
 #include "test_other_factory.h"
 
 void
-test_other_factory::
-	test_other_factory_should_build_the_correct_objects(void)
+test_other_factory::test_other_factory_should_build_the_correct_objects(void)
 {
 	other_factory *of = new other_factory();
 	const car *s = of->make_car();
@@ -25,7 +24,7 @@ test_other_factory::
     test_other_factory_should_inject_the_correct_objects_in_construction(void)
 {
 	other_factory *of = new other_factory();
-	const car* s = of->make_car();
+	const car *s = of->make_car();
 	const truck *t = of->make_truck();
 
 	const std::string expected_combination = "man x volvo";

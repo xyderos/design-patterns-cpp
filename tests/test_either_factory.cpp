@@ -1,12 +1,11 @@
 #include <cppunit/extensions/HelperMacros.h>
+
 #include "../src/either_factory.h"
 #include "../src/saab.h"
 #include "test_either_factory.h"
 
-
 void
-test_either_factory::
-	test_either_factory_should_build_the_correct_objects(void)
+test_either_factory::test_either_factory_should_build_the_correct_objects(void)
 {
 	either_factory *ef = new either_factory();
 	const car *s = ef->make_car();
@@ -28,7 +27,7 @@ test_either_factory::
     test_either_factory_should_inject_the_correct_objects_in_construction(void)
 {
 	either_factory *ef = new either_factory();
-	const car* s = ef->make_car();
+	const car *s = ef->make_car();
 	const truck *t = ef->make_truck();
 
 	const std::string expected_combination = "scania x saab";
