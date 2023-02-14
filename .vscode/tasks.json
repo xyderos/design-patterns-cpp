@@ -1,28 +1,17 @@
 {
-    "version": "2.0.0",
-    "tasks": 
-    [
-      {
-        "label": "build",
-        "type": "shell",
-        "command": "make",
-        "group": {
-          "kind": "build",
-          "isDefault": true
-        }
-      },
-      {
-        "label": "enviroment",
-        "type": "shell",
-        "command": "source",
-        "args": ["~/.bashrc"],
-      },
-      {
-      "label": "Build",
-        "dependsOn": [
-            "environment",
-            "build"
-        ]
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build",
+      "type": "shell",
+      "command": "make",
+      "args": [
+        "test"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
       }
-    ]
-  }
+    }
+  ]
+}

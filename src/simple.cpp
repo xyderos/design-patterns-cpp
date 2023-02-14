@@ -1,6 +1,7 @@
 #include "simple.h"
 
-simple::simple(std::string pl) : payload(pl)
+simple::simple(std::string pl)
+    : payload(pl)
 {
 }
 

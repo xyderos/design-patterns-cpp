@@ -2,16 +2,15 @@
 
 #include "command.h"
 
-class client 
-{
+class client {
     private:
-    command *on_start;
-    command *on_finish;
-    
-    public:
-    ~client();
+	command *on_start;
+	command *on_finish;
 
-    void set_start(command *command);
-    void set_finish(command *command);
-    std::string do_something();
+    public:
+	~client();
+
+	void set_start(command *command);
+	void set_finish(command *command);
+	std::string do_something();
 };
