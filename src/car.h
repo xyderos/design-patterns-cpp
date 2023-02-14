@@ -2,14 +2,13 @@
 
 #include <string>
 
-class car
-{
-  public:
-  std::string chassis;
-  std::string engine;
-  std::string firmware;
+class car {
+    public:
+	std::string chassis;
+	std::string engine;
+	std::string firmware;
 
-  car();
+	car();
 
-  const std::string to_string() const;
+	const std::string to_string() const;
 };
