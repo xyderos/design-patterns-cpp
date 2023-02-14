@@ -1,7 +1,6 @@
 #include "fruit.h"
 
-class orange : public fruit
-{
+class orange : public fruit {
     public:
-    std::string to_string() const override;
+	std::string to_string() const override;
 };

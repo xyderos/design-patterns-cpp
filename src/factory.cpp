@@ -7,11 +7,11 @@ factory::~factory()
 std::string
 factory::use_the_generator() const
 {
-    fruit* f = this->fruit_generator();
+	fruit *f = this->fruit_generator();
 
-    std::string s = f->to_string();
+	std::string s = f->to_string();
 
-    delete f;
+	delete f;
 
-    return s;
+	return s;
 }

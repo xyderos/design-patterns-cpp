@@ -1,12 +1,13 @@
 #include <cppunit/extensions/HelperMacros.h>
-#include "test_factory.h"
-#include "../src/orange_generator.h"
+
 #include "../src/apple_generator.h"
+#include "../src/orange_generator.h"
+#include "test_factory.h"
 
 void
 test_factory::test_factory_with_orange_input_should_generate_an_orange(void)
 {
-	orange_generator* generator = new orange_generator();
+	orange_generator *generator = new orange_generator();
 
 	std::string expected = "orange";
 
@@ -18,7 +19,7 @@ test_factory::test_factory_with_orange_input_should_generate_an_orange(void)
 void
 test_factory::test_factory_with_apple_input_should_generate_an_apple(void)
 {
-	apple_generator* generator = new apple_generator();
+	apple_generator *generator = new apple_generator();
 
 	std::string expected = "apple";
 

@@ -3,5 +3,5 @@
 fruit *
 orange_generator::fruit_generator() const
 {
-    return new orange(); 
+	return new orange();
 }
