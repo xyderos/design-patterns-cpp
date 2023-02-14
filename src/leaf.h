@@ -1,9 +1,8 @@
 #include "component.h"
 
-class leaf : public component
-{
+class leaf : public component {
     public:
-    leaf();
+	leaf();
 
-    std::string name() const override;
+	std::string name() const override;
 };

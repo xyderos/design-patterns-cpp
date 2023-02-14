@@ -1,17 +1,20 @@
 #include "component.h"
 
-component::component() : parent(nullptr)
+component::component()
+    : parent(nullptr)
 {
 }
 
-component::component(const component &other) : parent(other.parent)
+component::component(const component &other)
+    : parent(other.parent)
 {
 }
 
 component &
 component::operator=(const component &other)
 {
-	if(this == &other) return *this;
+	if (this == &other)
+		return *this;
 
 	this->parent = other.parent;
 

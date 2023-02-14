@@ -2,21 +2,19 @@
 
 #include <list>
 
-class composite : public component
-{
+class composite : public component {
     protected:
-    std::list<component *> children;
+	std::list<component *> children;
 
     public:
+	composite();
+	~composite();
 
-    composite();
-    ~composite();
+	void add(component *component) override;
 
-    void add(component *component) override;
+	void remove(component *component) override;
 
-    void remove(component *component) override;
+	bool is_composite() const override;
 
-    bool is_composite() const override;
-
-    std::string name() const override;
+	std::string name() const override;
 };
