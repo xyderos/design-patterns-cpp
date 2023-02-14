@@ -1,7 +1,6 @@
 #include "abstract_handler.h"
 
-class foo_handler : public abstract_handler
-{
+class foo_handler : public abstract_handler {
     public:
-    std::string handle(std::string request) override;
+	std::string handle(std::string request) override;
 };
