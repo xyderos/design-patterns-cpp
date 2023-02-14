@@ -1,6 +1,10 @@
 #include "wannabe_prototype.h"
 
-wannabe_prototype::wannabe_prototype(const std::string &a_string, int a_number) : prototype(a_string), wannabe_field(a_number) {}
+wannabe_prototype::wannabe_prototype(const std::string &a_string, int a_number)
+    : prototype(a_string)
+    , wannabe_field(a_number)
+{
+}
 
 prototype *
 wannabe_prototype::clone() const
