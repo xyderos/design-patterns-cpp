@@ -11,9 +11,11 @@ class complex : public command {
 	std::string b_;
 
     public:
+	complex(complex &&) = delete;
+	auto operator=(complex &&) -> complex & = delete;
 	complex(business_logic *l, std::string a, std::string b);
 	complex(const complex &);
-	complex &operator=(const complex &);
-	~complex();
-	std::string execute() const override;
+	auto operator=(const complex &) -> complex &;
+	~complex() override;
+	[[nodiscard]] auto execute() const -> std::string override;
 };

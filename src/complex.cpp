@@ -1,9 +1,13 @@
 #include "complex.h"
 
-complex::complex(business_logic *l, std::string a, std::string b)
+#include <utility>
+
+using std::string;
+
+complex::complex(business_logic *l, string a, string b)
     : bl(l)
-    , a_(a)
-    , b_(b)
+    , a_(std::move(a))
+    , b_(std::move(b))
 {
 }
 
@@ -19,8 +23,8 @@ complex::~complex()
 	delete this->bl;
 }
 
-std::string
-complex::execute() const
+auto
+complex::execute() const -> std::string
 {
 	auto s1 = this->bl->something(this->a_);
 	auto s2 = this->bl->something_else(this->b_);

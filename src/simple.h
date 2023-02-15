@@ -8,5 +8,5 @@ class simple : public command {
 
     public:
 	explicit simple(std::string pl);
-	std::string execute() const override;
+	[[nodiscard]] auto execute() const -> std::string override;
 };

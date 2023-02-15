@@ -9,8 +9,7 @@ void
 test_command::
     test_command_calling_with_simple_command_should_return_correct_values(void)
 {
-	client *cl = new client;
-	cl->set_start(new simple("simple"));
+	client *cl = new client(new simple("simple"), nullptr);
 
 	auto result = cl->do_something();
 
@@ -25,10 +24,8 @@ void
 test_command::
     test_command_calling_with_complex_command_should_return_correct_values(void)
 {
-	client *cl = new client;
-	business_logic *l = new business_logic;
-	cl->set_finish(new complex(l, "complex", "command"));
-
+	auto *l = new business_logic;
+	auto *cl = new client(nullptr, new complex(l, "complex", "command"));
 	auto result = cl->do_something();
 
 	std::string expected(
@@ -36,37 +33,31 @@ test_command::
 
 	CPPUNIT_ASSERT_EQUAL(expected, result);
 
-	delete l;
 	delete cl;
 }
 
 void
 test_command::
-    test_command_calling_with_simple_and_complex_commands_should_return_correct_values(
-	void)
-{
-	client *cl = new client;
-	cl->set_start(new simple("simple"));
-	business_logic *l = new business_logic;
-	cl->set_finish(new complex(l, "complex", "command"));
+    test_command_calling_with_simple_and_complex_commands_should_return_correct_values()
+	{
+		auto *l = new business_logic;
+		auto *cl = new client(new simple("simple"),new complex(l, "complex", "command"));
 
-	auto result = cl->do_something();
+		auto result = cl->do_something();
 
-	std::string expected(
-	    "simple:simplereceiver:something:complexreceiver:something_else:command");
+		std::string expected("simple:simplereceiver:something:complexreceiver:something_else:command");
 
-	CPPUNIT_ASSERT_EQUAL(expected, result);
+		CPPUNIT_ASSERT_EQUAL(expected, result);
 
-	//delete l;
-	delete cl;
-}
+		delete cl;
+	}
 
 void
 test_command::
     test_command_calling_with_no_command_handlers_should_return_empty_value(
 	void)
 {
-	client *cl = new client;
+	auto *cl = new client(nullptr, nullptr);
 
 	auto result = cl->do_something();
 

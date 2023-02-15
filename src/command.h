@@ -5,5 +5,5 @@
 class command {
     public:
 	virtual ~command();
-	virtual std::string execute() const = 0;
+	[[nodiscard]] virtual auto execute() const -> std::string = 0;
 };

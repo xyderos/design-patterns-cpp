@@ -1,13 +1,13 @@
 #include "business_logic.h"
 
-std::string
-business_logic::something(const std::string &a)
+auto
+business_logic::something(const std::string &a) -> std::string
 {
 	return "receiver:something:" + a;
 }
 
-std::string
-business_logic::something_else(const std::string &a)
+auto
+business_logic::something_else(const std::string &a) -> std::string
 {
 	return "receiver:something_else:" + a;
 }

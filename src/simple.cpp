@@ -1,12 +1,14 @@
 #include "simple.h"
 
+#include <utility>
+
 simple::simple(std::string pl)
-    : payload(pl)
+    : payload(std::move(pl))
 {
 }
 
-std::string
-simple::execute() const
+auto
+simple::execute() const -> std::string
 {
 	return "simple:" + this->payload;
 }
