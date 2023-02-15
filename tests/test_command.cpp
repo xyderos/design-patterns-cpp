@@ -57,7 +57,7 @@ test_command::
 
 	CPPUNIT_ASSERT_EQUAL(expected, result);
 
-	delete l;
+	//delete l;
 	delete cl;
 }
 
