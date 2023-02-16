@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "version": "2.0.0",
   "tasks": [
     {
@@ -11,6 +12,22 @@
       "group": {
         "kind": "build",
         "isDefault": true
+=======
+    "version": "2.0.0",
+    "tasks": 
+    [
+      {
+        "label": "build",
+        "type": "shell",
+        "command": "make",
+        "args": [
+          "test"
+        ],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        }
+>>>>>>> master
       }
     }
   ]
