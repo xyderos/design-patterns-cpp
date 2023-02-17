@@ -1,0 +1,18 @@
+#include <cppunit/TestAssert.h>
+
+#include "../src/a_state.h"
+#include "../src/another_state.h"
+#include "../src/context.h"
+#include "../src/state.h"
+#include "test_state.h"
+
+void
+test_state::test_state_should_change_states(void)
+{
+	context *c = new context(new a_state);
+
+	c->perform_an_action();
+
+	CPPUNIT_ASSERT_EQUAL(state_machine_t::ANOTHER_STATE,
+	    c->get_current_state());
+}
