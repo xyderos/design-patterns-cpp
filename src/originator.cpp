@@ -20,11 +20,13 @@ originator::originator(std::string state)
     : state_(std::move(state))
 {
 }
+
 void
 originator::business_logic_that_changes_the_state()
 {
 	this->state_ = this->generate(30);
 }
+
 auto
 originator::save() -> snapshot *
 {

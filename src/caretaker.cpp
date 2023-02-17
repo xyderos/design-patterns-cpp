@@ -22,7 +22,7 @@ caretaker::backup()
 auto
 caretaker::history() const -> std::vector<snapshot *>
 {
-	return snapshots;
+	return this->snapshots;
 }
 
 void
