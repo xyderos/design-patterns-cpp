@@ -4,9 +4,9 @@
 #include "test_builder.h"
 
 void
-test_builder::test_builder_should_produce_ancient_car(void)
+test_builder::test_builder_should_produce_ancient_car()
 {
-	director *d = new director();
+	auto *d = new director();
 	builder *builder = new volvo_builder();
 	d->set_builder(builder);
 
@@ -28,9 +28,9 @@ test_builder::test_builder_should_produce_ancient_car(void)
 }
 
 void
-test_builder::test_builder_should_produce_modern_car(void)
+test_builder::test_builder_should_produce_modern_car()
 {
-	director *d = new director();
+	auto *d = new director();
 	builder *builder = new volvo_builder();
 	d->set_builder(builder);
 
@@ -51,9 +51,9 @@ test_builder::test_builder_should_produce_modern_car(void)
 }
 
 void
-test_builder::test_builder_should_produce_custom_car(void)
+test_builder::test_builder_should_produce_custom_car()
 {
-	director *d = new director();
+	auto *d = new director();
 	builder *builder = new volvo_builder();
 	d->set_builder(builder);
 

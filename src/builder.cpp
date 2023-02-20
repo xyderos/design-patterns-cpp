@@ -1,5 +1,3 @@
 #include "builder.h"
 
-builder::~builder()
-{
-}
+builder::~builder() = default;

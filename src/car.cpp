@@ -7,8 +7,8 @@ car::car()
 {
 }
 
-const std::string
-car::to_string() const
+auto
+car::to_string() const -> const std::string
 {
 	return "engine : " + this->engine + ", chassis : " + this->chassis +
 	    ", firmware : " + firmware;

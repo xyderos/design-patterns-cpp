@@ -10,5 +10,5 @@ class car {
 
 	car();
 
-	const std::string to_string() const;
+	[[nodiscard]] auto to_string() const -> const std::string;
 };

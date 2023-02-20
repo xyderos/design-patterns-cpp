@@ -14,9 +14,9 @@ class test_builder : public CPPUNIT_NS::TestCase {
 	void tearDown(void) { }
 
     protected:
-	void test_builder_should_produce_ancient_car(void);
-	void test_builder_should_produce_modern_car(void);
-	void test_builder_should_produce_custom_car(void);
+	void test_builder_should_produce_ancient_car();
+	void test_builder_should_produce_modern_car();
+	void test_builder_should_produce_custom_car();
 };
 
 CPPUNIT_TEST_SUITE_REGISTRATION(test_builder);

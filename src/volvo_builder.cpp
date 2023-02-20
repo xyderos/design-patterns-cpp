@@ -10,9 +10,13 @@ volvo_builder::volvo_builder(const volvo_builder &other)
 {
 }
 
-volvo_builder &
-volvo_builder::operator=(const volvo_builder &other)
+auto
+volvo_builder::operator=(const volvo_builder &other) -> volvo_builder &
 {
+	if (this == &other) {
+		return *this;
+	}
+
 	this->volvo = other.volvo;
 	return *this;
 }
@@ -46,8 +50,8 @@ volvo_builder::make_firmware() const
 	this->volvo->firmware = "v1.0.0";
 }
 
-car *
-volvo_builder::get_car()
+auto
+volvo_builder::get_car() -> car *
 {
 	auto *to_return = this->volvo;
 	// try resetting since we want to make it reusable
