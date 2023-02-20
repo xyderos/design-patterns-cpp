@@ -2,6 +2,7 @@
 
 #include "prototype.h"
 
+// return a pointer to the cloned object
 class another_wannabe_prototype : public prototype {
 	int another_wannabe_field;
 
@@ -10,5 +11,5 @@ class another_wannabe_prototype : public prototype {
 
 	// since we return a replica of the object, we have the responsibility
 	// to free up that memory later
-	prototype *clone() const override;
+	[[nodiscard]] auto clone() const -> prototype * override;
 };

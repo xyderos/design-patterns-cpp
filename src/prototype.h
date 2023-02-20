@@ -12,9 +12,9 @@ class prototype {
     public:
 	prototype();
 	prototype(const prototype &);
-	prototype &operator=(const prototype &lhs);
-	prototype(const std::string &);
+	auto operator=(const prototype &lhs) -> prototype &;
+	explicit prototype(std::string);
 	virtual ~prototype();
-	virtual prototype *clone() const = 0;
-	virtual std::string action(int prototype_field);
+	[[nodiscard]] virtual auto clone() const -> prototype * = 0;
+	virtual auto action(int prototype_field) -> std::string;
 };

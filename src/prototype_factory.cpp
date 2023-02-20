@@ -18,8 +18,8 @@ prototype_factory::~prototype_factory()
 	delete prototypes_[type::original_wannabe];
 }
 
-prototype *
-prototype_factory::make_prototype(type t)
+auto
+prototype_factory::make_prototype(type t) -> prototype *
 {
 	return prototypes_[t]->clone();
 }

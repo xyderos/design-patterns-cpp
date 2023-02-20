@@ -4,9 +4,9 @@
 
 void
 test_prototype_factory::
-    test_prototype_factory_should_create_a_deep_copy_upon_cloning(void)
+    test_prototype_factory_should_create_a_deep_copy_upon_cloning()
 {
-	prototype_factory *pf = new prototype_factory();
+	auto *pf = new prototype_factory();
 
 	prototype *p1 = pf->make_prototype(type::original_wannabe);
 	std::string r1 = p1->action(5);
@@ -23,9 +23,9 @@ test_prototype_factory::
 
 void
 test_prototype_factory::
-    test_prototype_factory_should_clone_subclass_sucessfully(void)
+    test_prototype_factory_should_clone_subclass_sucessfully()
 {
-	prototype_factory *pf = new prototype_factory();
+	auto *pf = new prototype_factory();
 	prototype *p = pf->make_prototype(type::original_wannabe);
 
 	std::string expected_result = "wannabe_prototype x 5";

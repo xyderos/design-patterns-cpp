@@ -14,9 +14,8 @@ class test_prototype_factory : public CPPUNIT_NS::TestCase {
 	void tearDown(void) { }
 
     protected:
-	void test_prototype_factory_should_create_a_deep_copy_upon_cloning(
-	    void);
-	void test_prototype_factory_should_clone_subclass_sucessfully(void);
+	void test_prototype_factory_should_create_a_deep_copy_upon_cloning();
+	void test_prototype_factory_should_clone_subclass_sucessfully();
 };
 
 CPPUNIT_TEST_SUITE_REGISTRATION(test_prototype_factory);

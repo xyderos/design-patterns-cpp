@@ -7,8 +7,8 @@ another_wannabe_prototype::another_wannabe_prototype(
 {
 }
 
-prototype *
-another_wannabe_prototype::clone() const
+auto
+another_wannabe_prototype::clone() const -> prototype *
 {
 	return new another_wannabe_prototype(*this);
 }

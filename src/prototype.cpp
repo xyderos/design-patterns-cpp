@@ -10,18 +10,14 @@ prototype::prototype()
 {
 }
 
-prototype::prototype(const prototype &other)
-    : name(other.name)
-    , field(other.field)
-    , pointer_field(other.pointer_field)
-{
-}
+prototype::prototype(const prototype &other) = default;
 
-prototype &
-prototype::operator=(const prototype &lhs)
+auto
+prototype::operator=(const prototype &lhs) -> prototype &
 {
-	if (this == &lhs)
+	if (this == &lhs) {
 		return *this;
+	}
 
 	this->name = lhs.name;
 	this->field = lhs.field;
@@ -30,8 +26,8 @@ prototype::operator=(const prototype &lhs)
 	return *this;
 }
 
-prototype::prototype(const std::string &s)
-    : name(s)
+prototype::prototype(std::string s)
+    : name(std::move(s))
     , field(0)
     , pointer_field(nullptr)
 {
