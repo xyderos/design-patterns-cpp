@@ -2,7 +2,7 @@
 
 #include "state.h"
 
-class a_state : public state {
+class no_state : public state {
     public:
 	void handle_an_action() override;
 

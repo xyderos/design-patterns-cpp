@@ -1,3 +1,5 @@
+#include "a_state.h"
+#include "another_state.h"
 #include "context.h"
 #include "state_machine.h"
 
@@ -22,12 +24,7 @@ context::change_state(state *state)
 		delete this->state_;
 	}
 
-	if (typeid(state).name() == std::string("another_state")) {
-		this->current_state = state_machine_t::A_STATE;
-	} else {
-		this->current_state = state_machine_t::ANOTHER_STATE;
-	}
-
+	this->current_state = state->get_state();
 	this->state_ = state;
 	this->state_->set_context(this);
 }

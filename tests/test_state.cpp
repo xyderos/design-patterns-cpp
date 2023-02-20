@@ -7,7 +7,7 @@
 #include "test_state.h"
 
 void
-test_state::test_state_should_change_states(void)
+test_state::test_state_should_change_states_from_an_action_for_a_state(void)
 {
 	context *c = new context(new a_state);
 
@@ -15,4 +15,45 @@ test_state::test_state_should_change_states(void)
 
 	CPPUNIT_ASSERT_EQUAL(state_machine_t::ANOTHER_STATE,
 	    c->get_current_state());
+
+	delete c;
+}
+
+void
+test_state::test_state_should_change_states_from_another_action_for_a_state(
+    void)
+{
+	context *c = new context(new a_state);
+
+	c->perform_another_action();
+
+	CPPUNIT_ASSERT_EQUAL(state_machine_t::NO_STATE, c->get_current_state());
+
+	delete c;
+}
+
+void
+test_state::test_state_should_change_states_from_an_action_for_another_state(
+    void)
+{
+	context *c = new context(new another_state);
+
+	c->perform_an_action();
+
+	CPPUNIT_ASSERT_EQUAL(state_machine_t::NO_STATE, c->get_current_state());
+
+	delete c;
+}
+
+void
+test_state::
+    test_state_should_change_states_from_another_action_for_another_state(void)
+{
+	context *c = new context(new another_state);
+
+	c->perform_another_action();
+
+	CPPUNIT_ASSERT_EQUAL(state_machine_t::A_STATE, c->get_current_state());
+
+	delete c;
 }
