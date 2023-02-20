@@ -38,7 +38,7 @@ Explicitly declare interfaces **for each product and group**. Then declare **the
 
 * You often end up from an abstract factory
 
-* You initialize families of similar objetcs
+* You initialize families of similar objetcs immediately, comparing to builder where you can add some additional construction steps
 
 * Altough you usually use factory methods, you can also use prototype to compose components of these objects
 

@@ -1,13 +1,13 @@
 #include "man.h"
 
-std::string
-man::to_string() const
+auto
+man::to_string() const -> std::string
 {
 	return "man";
 }
 
-std::string
-man::what_am_I_carrying(const car &cargo) const
+auto
+man::what_am_I_carrying(const car &cargo) const -> std::string
 {
 	const std::string result = cargo.to_string();
 	return "man x " + result;

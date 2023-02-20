@@ -2,14 +2,14 @@
 #include "other_factory.h"
 #include "volvo.h"
 
-car *
-other_factory::make_car() const
+auto
+other_factory::make_car() const -> car *
 {
 	return new volvo();
 }
 
-truck *
-other_factory::make_truck() const
+auto
+other_factory::make_truck() const -> truck *
 {
 	return new man();
 }

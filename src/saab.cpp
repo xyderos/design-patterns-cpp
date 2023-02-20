@@ -1,7 +1,7 @@
 #include "saab.h"
 
-std::string
-saab::to_string() const
+auto
+saab::to_string() const -> std::string
 {
 	return "saab";
 }

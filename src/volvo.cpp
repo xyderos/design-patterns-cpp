@@ -1,7 +1,7 @@
 #include "volvo.h"
 
-std::string
-volvo::to_string() const
+auto
+volvo::to_string() const -> std::string
 {
 	return "volvo";
 }

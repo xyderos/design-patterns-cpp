@@ -1,8 +1,10 @@
 #include "truck.h"
 
+// The abstract factory interface declares a set of methods that return
+// different abstract products
 class abstract_factory {
     public:
 	virtual ~abstract_factory() = default;
-	virtual car *make_car() const = 0;
-	virtual truck *make_truck() const = 0;
+	[[nodiscard]] virtual auto make_car() const -> car * = 0;
+	[[nodiscard]] virtual auto make_truck() const -> truck * = 0;
 };

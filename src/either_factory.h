@@ -1,7 +1,9 @@
 #include "abstract_factory.h"
 
+// Implementations of factories produce a family of products that belong to a
+// single variant
 class either_factory : public abstract_factory {
     public:
-	car *make_car() const override;
-	truck *make_truck() const override;
+	[[nodiscard]] auto make_car() const -> car * override;
+	[[nodiscard]] auto make_truck() const -> truck * override;
 };

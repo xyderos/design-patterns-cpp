@@ -2,7 +2,7 @@
 #include "test_other_factory.h"
 
 void
-test_other_factory::test_other_factory_should_build_the_correct_objects(void)
+test_other_factory::test_other_factory_should_build_the_correct_objects()
 {
 	other_factory *of = new other_factory();
 	const car *s = of->make_car();
@@ -21,7 +21,7 @@ test_other_factory::test_other_factory_should_build_the_correct_objects(void)
 
 void
 test_other_factory::
-    test_other_factory_should_inject_the_correct_objects_in_construction(void)
+    test_other_factory_should_inject_the_correct_objects_in_construction()
 {
 	other_factory *of = new other_factory();
 	const car *s = of->make_car();
