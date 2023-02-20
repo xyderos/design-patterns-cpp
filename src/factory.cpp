@@ -1,11 +1,9 @@
 #include "factory.h"
 
-factory::~factory()
-{
-}
+factory::~factory() = default;
 
-std::string
-factory::use_the_generator() const
+auto
+factory::use_the_generator() const -> std::string
 {
 	fruit *f = this->fruit_generator();
 

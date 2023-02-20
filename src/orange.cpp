@@ -1,7 +1,7 @@
 #include "orange.h"
 
-std::string
-orange::to_string() const
+auto
+orange::to_string() const -> std::string
 {
 	return "orange";
 }

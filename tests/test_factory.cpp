@@ -5,9 +5,9 @@
 #include "test_factory.h"
 
 void
-test_factory::test_factory_with_orange_input_should_generate_an_orange(void)
+test_factory::test_factory_with_orange_input_should_generate_an_orange()
 {
-	orange_generator *generator = new orange_generator();
+	auto *generator = new orange_generator();
 
 	std::string expected = "orange";
 
@@ -17,9 +17,9 @@ test_factory::test_factory_with_orange_input_should_generate_an_orange(void)
 }
 
 void
-test_factory::test_factory_with_apple_input_should_generate_an_apple(void)
+test_factory::test_factory_with_apple_input_should_generate_an_apple()
 {
-	apple_generator *generator = new apple_generator();
+	auto *generator = new apple_generator();
 
 	std::string expected = "apple";
 

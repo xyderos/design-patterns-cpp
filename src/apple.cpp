@@ -1,7 +1,7 @@
 #include "apple.h"
 
-std::string
-apple::to_string() const
+auto
+apple::to_string() const -> std::string
 {
 	return "apple";
 }

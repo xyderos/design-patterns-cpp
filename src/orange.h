@@ -2,5 +2,5 @@
 
 class orange : public fruit {
     public:
-	std::string to_string() const override;
+	[[nodiscard]] auto to_string() const -> std::string override;
 };

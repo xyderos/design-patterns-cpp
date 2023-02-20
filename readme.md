@@ -37,4 +37,8 @@ The generator (either orange or fruit) will inherit the parent member function a
 
 * Abstract factory often encapsulates factory methods
 
+* Use a factory with an iterator so subclasses can return various iterators
+
 * Prototype requires complex initialization step since it doesnt involve inheritance, whereas we are dependent on inheritance but not coupled to initialization
+
+* Factory is a specialization of a template, can be step in a template
