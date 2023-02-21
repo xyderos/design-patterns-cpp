@@ -1,7 +1,7 @@
 #include "a_strategy.h"
 
 auto
-a_strategy::calculate(std::string_view /*data*/) const -> std::string
+a_strategy::calculate(const std::string & /*data*/) const -> std::string
 {
 	return "ginga";
 }
