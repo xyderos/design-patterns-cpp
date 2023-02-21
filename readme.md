@@ -28,4 +28,6 @@
 
 ## Things to consider
 
+* Essentially, it allows dynamic subscribing and receiving requests
+
 * Mediator vs observers, the first one eliminates mutual dependencies in a single object, while observer is dynamic, one way

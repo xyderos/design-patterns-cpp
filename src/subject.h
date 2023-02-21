@@ -2,6 +2,7 @@
 
 #include "observer.h"
 
+// itnerface the subscribers have
 class subject {
     public:
 	virtual ~subject();

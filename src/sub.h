@@ -5,6 +5,7 @@
 
 #include <list>
 
+// implementation
 class sub : public subject {
 
 	std::list<observer *> list_observer_;

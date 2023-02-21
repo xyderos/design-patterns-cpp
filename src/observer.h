@@ -4,6 +4,7 @@
 
 #include <string>
 
+// base interface that notifies the subscribers
 class observer {
     public:
 	virtual ~observer();

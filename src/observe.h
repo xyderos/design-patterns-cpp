@@ -4,6 +4,7 @@
 #include "observer.h"
 #include "subject.h"
 
+// concrete implementation of the interface
 class observe : public observer {
 
     private:

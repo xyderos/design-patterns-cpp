@@ -7,7 +7,7 @@
 #include "test_observer.h"
 
 void
-test_observer::test_observer_should_send_update(void)
+test_observer::test_observer_should_send_update()
 {
 	auto *s = new sub;
 	auto *o = new observe(*s);
@@ -22,7 +22,7 @@ test_observer::test_observer_should_send_update(void)
 }
 
 void
-test_observer::test_observer_should_send_update_to_all_observers(void)
+test_observer::test_observer_should_send_update_to_all_observers()
 {
 	auto *s = new sub;
 	auto *o = new observe(*s);
@@ -42,8 +42,7 @@ test_observer::test_observer_should_send_update_to_all_observers(void)
 
 void
 test_observer::
-    test_observer_should_keep_previous_notification_when_we_detached_an_observer(
-	void)
+    test_observer_should_keep_previous_notification_when_we_detached_an_observer()
 {
 	auto *s = new sub;
 	auto *o = new observe(*s);
