@@ -4,8 +4,8 @@
 #include "test_mediator.h"
 
 void
-test_mediator::test_mediator_should_trigger_correct_events_for_either_component(
-    void)
+test_mediator::
+    test_mediator_should_trigger_correct_events_for_either_component()
 {
 	auto *c1 = new either_compoment;
 	auto *c2 = new other_compoment;
@@ -22,8 +22,7 @@ test_mediator::test_mediator_should_trigger_correct_events_for_either_component(
 }
 
 void
-test_mediator::test_mediator_should_trigger_correct_events_for_other_component(
-    void)
+test_mediator::test_mediator_should_trigger_correct_events_for_other_component()
 {
 	auto *c1 = new either_compoment;
 	auto *c2 = new other_compoment;

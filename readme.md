@@ -39,4 +39,8 @@
 
 * Essentially connects sends and receivers with requests
 
+* Mediator eliminates mutul dependencies between components, they become dependent to the mediator
+
+* Can be implemented as an observer also
+
 * Smililar to facade, trying to organize tightly coupled classes

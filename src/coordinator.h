@@ -3,6 +3,7 @@
 #include "notification.h"
 #include "other_component.h"
 
+// the actual mediator, provides coordinative behavior for several components
 class coordinator : public mediator {
     private:
 	either_compoment *co1;

@@ -2,6 +2,7 @@
 
 #include "mediator.h"
 
+// base class that can store mediators instance
 class component {
     protected:
 	mediator *mediator_;

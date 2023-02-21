@@ -15,10 +15,8 @@ class test_mediator : public CPPUNIT_NS::TestCase {
 	void tearDown(void) { }
 
     protected:
-	void test_mediator_should_trigger_correct_events_for_either_component(
-	    void);
-	void test_mediator_should_trigger_correct_events_for_other_component(
-	    void);
+	void test_mediator_should_trigger_correct_events_for_either_component();
+	void test_mediator_should_trigger_correct_events_for_other_component();
 };
 
 CPPUNIT_TEST_SUITE_REGISTRATION(test_mediator);
