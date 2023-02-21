@@ -37,3 +37,7 @@
 * Use iterators to traverse composite trees
 
 * Use in conjunction with factories to let subclasses return compatible iterators
+
+* Use it in snapshots to choose/edit/add/delete over states
+
+* Use it in conjunction with a visitor to traverse entities and apply operations, even if they are different classes

@@ -4,6 +4,7 @@
 
 #include <vector>
 
+// a generic adapter to the vector class
 template <typename T> class container {
 	friend class iterator<T, container>;
 	std::vector<T> data;

@@ -4,6 +4,7 @@
 #include <string>
 #include <vector>
 
+// sample iterator definition
 template <typename T, typename U> class iterator {
 
 	using i = typename std::vector<T>::iterator;
