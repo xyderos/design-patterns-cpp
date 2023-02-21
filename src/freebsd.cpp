@@ -1,6 +1,7 @@
 #include "freebsd.h"
 
-std::string freebsd::name() const
+auto
+freebsd::name() const -> std::string
 {
-    return "FREEBSD";
+	return "FREEBSD";
 }

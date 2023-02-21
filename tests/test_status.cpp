@@ -1,16 +1,17 @@
 #include <cppunit/extensions/HelperMacros.h>
-#include "../src/status.h"
-#include "../src/os.h"
+
 #include "../src/freebsd.h"
+#include "../src/os.h"
+#include "../src/status.h"
 #include "../src/ubuntu.h"
 #include "test_status.h"
 
 void
-test_status::test_status_with_ubuntu_should_return_ubuntu(void)
+test_status::test_status_with_ubuntu_should_return_ubuntu()
 {
-	os* o = new ubuntu();
+	os *o = new ubuntu();
 
-	status* s = new status(o);
+	auto *s = new status(o);
 
 	std::string result = s->os_name();
 	std::string expected = "UBUNTU";
@@ -21,11 +22,11 @@ test_status::test_status_with_ubuntu_should_return_ubuntu(void)
 }
 
 void
-test_status::test_status_with_freebsd_should_return_freebsd(void)
+test_status::test_status_with_freebsd_should_return_freebsd()
 {
-	os* o = new freebsd();
+	os *o = new freebsd();
 
-	status* s = new status(o);
+	auto *s = new status(o);
 
 	std::string result = s->os_name();
 	std::string expected = "FREEBSD";

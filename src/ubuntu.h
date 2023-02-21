@@ -1,7 +1,7 @@
 #include "os.h"
 
-class ubuntu : public os
-{
+// a sample implementation
+class ubuntu : public os {
     public:
-    std::string name() const override;
+	[[nodiscard]] auto name() const -> std::string override;
 };

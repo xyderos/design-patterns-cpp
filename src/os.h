@@ -2,9 +2,9 @@
 
 #include <string>
 
-class os
-{
+// define the interface for the implementations.
+class os {
     public:
-    virtual ~os();
-    virtual std::string name() const = 0;
+	virtual ~os();
+	[[nodiscard]] virtual auto name() const -> std::string = 0;
 };

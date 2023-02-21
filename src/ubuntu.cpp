@@ -1,6 +1,7 @@
 #include "ubuntu.h"
 
-std::string ubuntu::name() const
+auto
+ubuntu::name() const -> std::string
 {
-    return "UBUNTU";
+	return "UBUNTU";
 }

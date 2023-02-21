@@ -1,26 +1,28 @@
 #include "status.h"
 
-status::status(os *type) : _op_sys(type){}
-
-status::status(const status &other) : _op_sys(other._op_sys)
+status::status(os *type)
+    : _op_sys(type)
 {
 }
 
-status &
-status::operator=(const status &other)
+status::status(const status &other) = default;
+
+auto
+status::operator=(const status &other) -> status &
 {
-	if(this == &other) return *this;
+	if (this == &other) {
+		return *this;
+	}
 
-    this->_op_sys = other._op_sys;
+	this->_op_sys = other._op_sys;
 
-    return *this;
+	return *this;
 }
 
-status::~status()
-{}
+status::~status() = default;
 
-std::string
-status::os_name() const
+auto
+status::os_name() const -> std::string
 {
 	return _op_sys->name();
 }

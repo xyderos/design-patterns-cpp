@@ -40,6 +40,10 @@ Since the bigger it becomes, the more difficult to control, you might have to up
 
 ## Things to consider
 
+* Bridge is designed beforehand to make stuff of the application independent from each other, adapter makes incompatible stuff work together
+
+* Is based on composition, delegates work to other objects
+
 * Combine with an abstract factory, abstractions are defined b the bridge, implementations reside in the factory
 
 * Combine with builder, the director is the abstraction, the builders are the implementations

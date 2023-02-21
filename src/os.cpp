@@ -1,3 +1,3 @@
 #include "os.h"
 
-os::~os() {}
+os::~os() = default;
