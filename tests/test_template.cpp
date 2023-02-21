@@ -4,7 +4,7 @@
 
 void
 test_template::
-    test_template_with_an_implementation_should_produce_the_correct_result(void)
+    test_template_with_an_implementation_should_produce_the_correct_result()
 {
 	auto *an_impl = new an_implementation;
 
@@ -22,8 +22,7 @@ test_template::
 
 void
 test_template::
-    test_template_with_another_implementation_should_produce_the_correct_result(
-	void)
+    test_template_with_another_implementation_should_produce_the_correct_result()
 {
 	auto *another_impl = new another_implementation;
 

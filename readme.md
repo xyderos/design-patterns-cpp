@@ -32,4 +32,6 @@
 
 ## Things to consider
 
-* Template is based on inheritance, strategy is based on composition 
+* Template is based on inheritance, strategy is based on composition
+
+* Factory is a specialization of templates, can serve as a step in a template
