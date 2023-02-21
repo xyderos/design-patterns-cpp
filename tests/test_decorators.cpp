@@ -5,7 +5,7 @@
 #include "test_decorators.h"
 
 void
-test_decorators::decorator_should_decorate_a_component(void)
+test_decorators::decorator_should_decorate_a_component()
 {
 	component *simple = new concrete;
 
@@ -17,7 +17,7 @@ test_decorators::decorator_should_decorate_a_component(void)
 }
 
 void
-test_decorators::decorator_should_decorate_both_components(void)
+test_decorators::decorator_should_decorate_both_components()
 {
 	component *simple = new concrete;
 
@@ -37,7 +37,7 @@ test_decorators::decorator_should_decorate_both_components(void)
 }
 
 void
-test_decorators::decorator_should_decorate_another_decorator(void)
+test_decorators::decorator_should_decorate_another_decorator()
 {
 	component *simple = new concrete;
 

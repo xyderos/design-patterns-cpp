@@ -2,8 +2,9 @@
 
 #include "component.h"
 
+// default implementation of operations
 class concrete : public component {
 
     public:
-	std::string message() const override;
+	[[nodiscard]] auto message() const -> std::string override;
 };

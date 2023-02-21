@@ -1,7 +1,7 @@
 #include "concrete.h"
 
-std::string
-concrete::message() const
+auto
+concrete::message() const -> std::string
 {
 	return "concrete";
 }

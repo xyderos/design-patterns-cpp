@@ -2,15 +2,17 @@
 
 #include "component.h"
 
+// follows the same interface as the other components, a wrapping interface for
+// all the decorators, can store a component and its initialization means
 class decorator : public component {
 
     protected:
 	component *comp;
 
     public:
-	decorator(component *);
+	explicit decorator(component *);
 	decorator(const decorator &);
-	decorator &operator=(const decorator &);
+	auto operator=(const decorator &) -> decorator &;
 
-	std::string message() const override;
+	[[nodiscard]] auto message() const -> std::string override;
 };

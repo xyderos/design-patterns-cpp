@@ -5,8 +5,8 @@ either_decorator::either_decorator(component *c)
 {
 }
 
-std::string
-either_decorator::message() const
+auto
+either_decorator::message() const -> std::string
 {
 	return "either x " + this->comp->message();
 }

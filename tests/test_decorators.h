@@ -14,9 +14,9 @@ class test_decorators : public CPPUNIT_NS::TestCase {
 	void tearDown(void) { }
 
     protected:
-	void decorator_should_decorate_a_component(void);
-	void decorator_should_decorate_both_components(void);
-	void decorator_should_decorate_another_decorator(void);
+	void decorator_should_decorate_a_component();
+	void decorator_should_decorate_both_components();
+	void decorator_should_decorate_another_decorator();
 };
 
 CPPUNIT_TEST_SUITE_REGISTRATION(test_decorators);

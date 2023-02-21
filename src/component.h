@@ -2,8 +2,9 @@
 
 #include <string>
 
+// base interface defines the operations that can be changed by the decorators
 class component {
     public:
 	virtual ~component();
-	virtual std::string message() const = 0;
+	[[nodiscard]] virtual auto message() const -> std::string = 0;
 };

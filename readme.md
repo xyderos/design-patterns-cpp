@@ -50,4 +50,8 @@ One object has a reference to another and it delegates the work
 
 * Can use prototype to avoid reconstructing
 
+* Chain of responsibility executes operations independently of each other, can stop passing the request further, decorators extend the behavior
+
 * Proxy moves the workload somewhere else, decorator lets it be controlled by the client
+
+* Strategy changes the internal behavior of the object, decorator its external behavior

@@ -10,19 +10,20 @@ decorator::decorator(const decorator &other)
 {
 }
 
-decorator &
-decorator::operator=(const decorator &other)
+auto
+decorator::operator=(const decorator &other) -> decorator &
 {
-	if (this == &other)
+	if (this == &other) {
 		return *this;
+	}
 
 	this->comp = other.comp;
 
 	return *this;
 }
 
-std::string
-decorator::message() const
+auto
+decorator::message() const -> std::string
 {
 	return this->comp->message();
 }
