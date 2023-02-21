@@ -8,5 +8,5 @@ class unique_state {
     public:
 	unique_state(const std::string &loc, const std::string &adr);
 	unique_state(const unique_state &other);
-	std::string to_string() const;
+	[[nodiscard]] auto to_string() const -> std::string;
 };

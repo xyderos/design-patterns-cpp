@@ -3,8 +3,8 @@
 #include <algorithm>
 #include <iostream>
 
-std::string
-factory::get_key(const shared_state &shared) const
+auto
+factory::get_key(const shared_state &shared) const -> std::string
 {
 	return shared.to_string() + "_state";
 }
@@ -23,8 +23,8 @@ factory::factory(std::vector<shared_state> states)
 {
 }
 
-flyweight
-factory::get_flyweight(const shared_state &shared)
+auto
+factory::get_flyweight(const shared_state &shared) -> flyweight
 {
 	std::string key = this->get_key(shared);
 
@@ -34,15 +34,16 @@ factory::get_flyweight(const shared_state &shared)
 	return this->flyweights.at(key);
 }
 
-std::vector<std::string>
-factory::get_flyweights()
+auto
+factory::get_flyweights() -> std::vector<std::string>
 {
 	std::vector<std::string> result;
 
 	std::for_each(this->flyweights.begin(), this->flyweights.end(),
 	    [&](std::pair<std::string, flyweight> pair) {
-		    if (!pair.first.empty())
+		    if (!pair.first.empty()) {
 			    result.emplace_back(pair.first);
+		    }
 	    });
 
 	return result;

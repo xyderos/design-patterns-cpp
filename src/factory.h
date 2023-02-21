@@ -13,11 +13,11 @@
 class factory {
 	std::unordered_map<std::string, flyweight> flyweights;
 
-	std::string get_key(const shared_state &shared) const;
+	auto get_key(const shared_state &shared) const -> std::string;
 
     public:
-	factory(std::vector<shared_state> states);
+	explicit factory(std::vector<shared_state> states);
 
-	flyweight get_flyweight(const shared_state &shared);
-	std::vector<std::string> get_flyweights();
+	auto get_flyweight(const shared_state &shared) -> flyweight;
+	auto get_flyweights() -> std::vector<std::string>;
 };

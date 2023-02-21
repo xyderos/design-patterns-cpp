@@ -6,9 +6,9 @@
 #include <iostream>
 
 void
-test_flyweight::test_flyweight_should_add_if_element_is_not_present(void)
+test_flyweight::test_flyweight_should_add_if_element_is_not_present()
 {
-	factory *f = new factory(
+	auto *f = new factory(
 	    std::vector<shared_state> { shared_state("John", "Doa", "1"),
 		shared_state("Jill", "Doe", "2") });
 
@@ -22,9 +22,9 @@ test_flyweight::test_flyweight_should_add_if_element_is_not_present(void)
 }
 
 void
-test_flyweight::test_flyweight_should_return_correct_element(void)
+test_flyweight::test_flyweight_should_return_correct_element()
 {
-	factory *f = new factory(
+	auto *f = new factory(
 	    std::vector<shared_state> { shared_state("John", "Doa", "1"),
 		shared_state("Jill", "Doe", "2") });
 
@@ -40,9 +40,9 @@ test_flyweight::test_flyweight_should_return_correct_element(void)
 }
 
 void
-test_flyweight::test_flyweight_should_keep_consistent_shared_state(void)
+test_flyweight::test_flyweight_should_keep_consistent_shared_state()
 {
-	factory *f = new factory(
+	auto *f = new factory(
 	    std::vector<shared_state> { shared_state("John", "Doa", "1"),
 		shared_state("Jill", "Doe", "2") });
 

@@ -14,9 +14,9 @@ class test_flyweight : public CPPUNIT_NS::TestCase {
 	void tearDown(void) { }
 
     protected:
-	void test_flyweight_should_add_if_element_is_not_present(void);
-	void test_flyweight_should_return_correct_element(void);
-	void test_flyweight_should_keep_consistent_shared_state(void);
+	void test_flyweight_should_add_if_element_is_not_present();
+	void test_flyweight_should_return_correct_element();
+	void test_flyweight_should_keep_consistent_shared_state();
 };
 
 CPPUNIT_TEST_SUITE_REGISTRATION(test_flyweight);

@@ -10,11 +10,12 @@ flyweight::flyweight(const flyweight &other)
 {
 }
 
-flyweight &
-flyweight::operator=(const flyweight &other)
+auto
+flyweight::operator=(const flyweight &other) -> flyweight &
 {
-	if (this == &other)
+	if (this == &other) {
 		return *this;
+	}
 
 	this->shared = other.shared;
 

@@ -10,11 +10,12 @@ class flyweight {
 	shared_state *shared;
 
     public:
-	flyweight(const shared_state &s);
+	explicit flyweight(const shared_state &s);
 	flyweight(const flyweight &other);
-	flyweight &operator=(const flyweight &other);
+	auto operator=(const flyweight &other) -> flyweight &;
 	~flyweight();
-	shared_state *get_shared_state() const;
+	[[nodiscard]] auto get_shared_state() const -> shared_state *;
 
-	std::string business_logic(const unique_state &unique) const;
+	[[nodiscard]] auto business_logic(const unique_state &unique) const
+	    -> std::string;
 };
