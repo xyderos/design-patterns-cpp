@@ -13,8 +13,8 @@ class test_visitor : public CPPUNIT_NS::TestCase {
 	void tearDown(void) { }
 
     protected:
-	void test_visitor_case_one(void);
-	void test_visitor_case_two(void);
+	void test_visitor_case_one();
+	void test_visitor_case_two();
 };
 
 CPPUNIT_TEST_SUITE_REGISTRATION(test_visitor);

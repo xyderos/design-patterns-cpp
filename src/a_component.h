@@ -6,6 +6,7 @@
 
 #include <string>
 
+// must implement the accept method in a way that it calls the visitors method
 class a_component : public component {
     public:
 	void accept(visitor *visitor) const override;

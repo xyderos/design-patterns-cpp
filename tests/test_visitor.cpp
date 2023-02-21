@@ -10,7 +10,7 @@
 #include <algorithm>
 
 void
-test_visitor::test_visitor_case_one(void)
+test_visitor::test_visitor_case_one()
 {
 	auto a_c = new a_component;
 	auto an_c = new another_component;
@@ -28,7 +28,7 @@ test_visitor::test_visitor_case_one(void)
 }
 
 void
-test_visitor::test_visitor_case_two(void)
+test_visitor::test_visitor_case_two()
 {
 	auto a_c = new a_component;
 	auto an_c = new another_component;

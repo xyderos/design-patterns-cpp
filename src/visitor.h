@@ -4,6 +4,7 @@
 class a_component;
 class another_component;
 
+// define visiting methods on different components
 class visitor {
     protected:
 	notification_t notif_;

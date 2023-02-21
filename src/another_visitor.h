@@ -3,6 +3,8 @@
 #include "notification.h"
 #include "visitor.h"
 
+// implement several methids of the same process which can work with all the
+// components
 class another_visitor : public visitor {
 
     public:

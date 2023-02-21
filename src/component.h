@@ -2,6 +2,7 @@
 
 #include "visitor.h"
 
+// interface that declares a method where every visitor can join
 class component {
     public:
 	virtual ~component();
