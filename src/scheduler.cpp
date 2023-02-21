@@ -1,13 +1,13 @@
 #include "scheduler.h"
 
-std::string
-scheduler::before() const
+auto
+scheduler::before() const -> std::string
 {
 	return "sched_before";
 }
 
-std::string
-scheduler::after() const
+auto
+scheduler::after() const -> std::string
 {
 	return "sched_after";
 }

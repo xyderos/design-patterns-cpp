@@ -1,13 +1,13 @@
 #include "allocator.h"
 
-std::string
-allocator::before() const
+auto
+allocator::before() const -> std::string
 {
 	return "alloc_before";
 }
 
-std::string
-allocator::after() const
+auto
+allocator::after() const -> std::string
 {
 	return "alloc_after";
 }

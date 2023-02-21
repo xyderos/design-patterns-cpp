@@ -2,8 +2,9 @@
 
 #include <string>
 
+// accepts requests from either the facade or client code
 class scheduler {
     public:
-	std::string before() const;
-	std::string after() const;
+	[[nodiscard]] auto before() const -> std::string;
+	[[nodiscard]] auto after() const -> std::string;
 };

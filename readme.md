@@ -28,9 +28,13 @@
 
 ## Things to consider
 
-* Defines a new interface for the object
+* Defines a new interface for the object, adapter makes the existing interface usable
 
 * Factory can be an alternative to facade when you want to hide the implementation
+
+* Flyweight makes a lot of small objects, facade makes an object that represents a whole sub system
+
+* Mediator centralizes the comms between components of a sub system, they only know about the mediator and nothing else
 
 * Can be converted to singleton since one facade is usually enough
 

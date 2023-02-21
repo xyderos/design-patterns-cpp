@@ -4,12 +4,12 @@
 #include "test_facade.h"
 
 void
-test_facade::test_facade_should_initialise_everything_accoring_to_priority(void)
+test_facade::test_facade_should_initialise_everything_accoring_to_priority()
 {
-	scheduler *sched = new scheduler;
-	allocator *al = new allocator;
+	auto *sched = new scheduler;
+	auto *al = new allocator;
 
-	facade *f = new facade(al, sched);
+	auto *f = new facade(al, sched);
 
 	std::string expected("alloc_beforesched_beforealloc_aftersched_after");
 

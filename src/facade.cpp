@@ -11,11 +11,12 @@ facade::facade(const facade &other)
 {
 }
 
-facade &
-facade::operator=(const facade &other)
+auto
+facade::operator=(const facade &other) -> facade &
 {
-	if (this == &other)
+	if (this == &other) {
 		return *this;
+	}
 
 	this->a = other.a;
 	this->sched = other.sched;
@@ -29,8 +30,8 @@ facade::~facade()
 	delete this->sched;
 }
 
-std::string
-facade::initialization()
+auto
+facade::initialization() const -> std::string
 {
 	std::string res;
 
