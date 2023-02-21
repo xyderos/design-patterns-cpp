@@ -4,7 +4,7 @@
 #include "test_complex_components.h"
 
 void
-test_complex_components::test_complex_composite_should_generate_leafs(void)
+test_complex_components::test_complex_composite_should_generate_leafs()
 {
 	component *tree = new composite;
 	component *either_branch = new composite;
@@ -24,7 +24,7 @@ test_complex_components::test_complex_composite_should_generate_leafs(void)
 }
 
 void
-test_complex_components::test_complex_composite_should_generate_a_tree(void)
+test_complex_components::test_complex_composite_should_generate_a_tree()
 {
 	component *tree = new composite;
 	component *either_branch = new composite;
@@ -50,8 +50,7 @@ test_complex_components::test_complex_composite_should_generate_a_tree(void)
 
 void
 test_complex_components::
-    test_complex_composite_should_generate_a_tree_and_include_other_compoments_agnostically(
-	void)
+    test_complex_composite_should_generate_a_tree_and_include_other_compoments_agnostically()
 {
 	component *tree = new composite;
 	component *either_branch = new composite;
@@ -71,8 +70,9 @@ test_complex_components::
 
 	component *l = new leaf();
 
-	if (tree->is_composite())
+	if (tree->is_composite()) {
 		tree->add(l);
+	}
 
 	std::string expected(
 	    "Branch(Branch(leaf + leaf) + Branch(leaf) + leaf)");
@@ -83,8 +83,7 @@ test_complex_components::
 
 void
 test_complex_components::
-    test_complex_composite_should_delete_a_compoment_from_the_tree_sucessfully(
-	void)
+    test_complex_composite_should_delete_a_compoment_from_the_tree_sucessfully()
 {
 	component *tree = new composite;
 	component *either_branch = new composite;
@@ -104,8 +103,9 @@ test_complex_components::
 
 	component *l = new leaf();
 
-	if (tree->is_composite())
+	if (tree->is_composite()) {
 		tree->add(l);
+	}
 
 	tree->remove(l);
 

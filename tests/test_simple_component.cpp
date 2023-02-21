@@ -2,7 +2,7 @@
 #include "test_simple_component.h"
 
 void
-test_simple_component::test_simple_component_should_return_a_leaf(void)
+test_simple_component::test_simple_component_should_return_a_leaf()
 {
 	component *c = new leaf();
 

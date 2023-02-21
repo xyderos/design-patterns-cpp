@@ -1,8 +1,9 @@
 #include "component.h"
 
+// end objects of a composition
 class leaf : public component {
     public:
 	leaf();
 
-	std::string name() const override;
+	[[nodiscard]] auto name() const -> std::string override;
 };

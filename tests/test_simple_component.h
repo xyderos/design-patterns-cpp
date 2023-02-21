@@ -12,7 +12,7 @@ class test_simple_component : public CPPUNIT_NS::TestCase {
 	void tearDown(void) { }
 
     protected:
-	void test_simple_component_should_return_a_leaf(void);
+	void test_simple_component_should_return_a_leaf();
 };
 
 CPPUNIT_TEST_SUITE_REGISTRATION(test_simple_component);

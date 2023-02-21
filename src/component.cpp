@@ -5,25 +5,21 @@ component::component()
 {
 }
 
-component::component(const component &other)
-    : parent(other.parent)
-{
-}
+component::component(const component &other) = default;
 
-component &
-component::operator=(const component &other)
+auto
+component::operator=(const component &other) -> component &
 {
-	if (this == &other)
+	if (this == &other) {
 		return *this;
+	}
 
 	this->parent = other.parent;
 
 	return *this;
 }
 
-component::~component()
-{
-}
+component::~component() = default;
 
 void
 component::set_parent(component *p)
@@ -31,8 +27,8 @@ component::set_parent(component *p)
 	this->parent = p;
 }
 
-component *
-component::get_parent() const
+auto
+component::get_parent() const -> component *
 {
 	return this->parent;
 }
@@ -40,17 +36,15 @@ component::get_parent() const
 void
 component::add(component *c)
 {
-	c->is_composite();
 }
 
 void
 component::remove(component *c)
 {
-	c->is_composite();
 }
 
-bool
-component::is_composite() const
+auto
+component::is_composite() const -> bool
 {
 	return false;
 }

@@ -5,8 +5,8 @@ leaf::leaf()
 {
 }
 
-std::string
-leaf::name() const
+auto
+leaf::name() const -> std::string
 {
 	return "leaf";
 }

@@ -36,6 +36,10 @@
 
 * Use with a builder, the builders can build various leaves
 
+* Chain of responsibility is used in conjunction with composite often, when a component gets a request, it passes it thorugh the chain
+
+* Implement leaf nodes as flyweights to save up memory
+
 * Can also implement leaves as as flyweights to reduce ram usage
 
 * Use prototype to clone, avoid the extra overhead of re constructing

@@ -29,8 +29,8 @@ composite::remove(component *c)
 	delete c;
 }
 
-bool
-composite::is_composite() const
+auto
+composite::is_composite() const -> bool
 {
 	return true;
 }
@@ -42,11 +42,12 @@ composite::name() const
 
 	std::for_each(this->children.begin(), this->children.end(),
 	    [&](const component *ref) {
-		    if (ref == this->children.back())
+		    if (ref == this->children.back()) {
 			    result += ref->name();
 
-		    else
+		    } else {
 			    result += ref->name() + " + ";
+		    }
 	    });
 
 	return "Branch(" + result + ")";

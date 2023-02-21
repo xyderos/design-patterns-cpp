@@ -2,19 +2,21 @@
 
 #include <list>
 
+// complex objects that might have children, delegate work to their children
 class composite : public component {
     protected:
 	std::list<component *> children;
 
     public:
 	composite();
-	~composite();
+	~composite() override;
 
 	void add(component *component) override;
 
+	// todo memory management
 	void remove(component *component) override;
 
-	bool is_composite() const override;
+	[[nodiscard]] auto is_composite() const -> bool override;
 
-	std::string name() const override;
+	[[nodiscard]] auto name() const -> std::string override;
 };
