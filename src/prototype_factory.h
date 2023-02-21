@@ -6,7 +6,8 @@
 
 enum type { original_wannabe = 0, another_wannabe = 1 };
 
-// use one of the concrete prototypes to generate another one
+// 2 concrete prototypes, each for each class, each time you want to make one
+// you can clone some of these
 class prototype_factory {
 
     private:
@@ -15,5 +16,6 @@ class prototype_factory {
     public:
 	prototype_factory();
 	~prototype_factory();
+	// specify the type and make a prototype
 	auto make_prototype(type) -> prototype *;
 };

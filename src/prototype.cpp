@@ -38,8 +38,8 @@ prototype::~prototype()
 	free(this->pointer_field);
 }
 
-std::string
-prototype::action(int prototype_field)
+auto
+prototype::action(int prototype_field) -> std::string
 {
 	this->field = prototype_field;
 	return this->name + " x " + std::to_string(this->field);

@@ -2,11 +2,12 @@
 
 #include <string>
 
-// When having pointer members, apply the rule of three
+// this is the main abstract class that gives cloning abilities
 class prototype {
     protected:
 	std::string name;
 	int field;
+	// When having pointer members, apply the rule of three
 	void *pointer_field;
 
     public:
