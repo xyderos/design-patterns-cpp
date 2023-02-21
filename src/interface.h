@@ -2,8 +2,10 @@
 
 #include <string>
 
+// common operations between the real object and the proxy
+// as long as you use the subject with its interface, you can use the proxy
 class interface {
     public:
-	virtual std::string common() const = 0;
+	[[nodiscard]] virtual auto common() const -> std::string = 0;
 	virtual ~interface() = default;
 };

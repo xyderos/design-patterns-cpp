@@ -1,15 +1,17 @@
 #include "real.h"
 
+// item to go through the proxy
 class fake : public interface {
     private:
 	real *r;
-	std::string log() const;
+	[[nodiscard]] auto log() const -> std::string;
 
     public:
-	fake(real *rl);
+	explicit fake(real *rl);
 	fake(const fake &f);
-	fake &operator=(const fake &rhs);
-	~fake();
+	auto operator=(const fake &rhs) -> fake &;
+	~fake() override;
 
-	std::string common() const override;
+	// usually its caching, logging, loading etc
+	[[nodiscard]] auto common() const -> std::string override;
 };

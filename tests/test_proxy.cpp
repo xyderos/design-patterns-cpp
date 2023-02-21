@@ -3,7 +3,7 @@
 #include "test_proxy.h"
 
 void
-test_proxy::test_proxy_real_subject_should_execute_its_own_common(void)
+test_proxy::test_proxy_real_subject_should_execute_its_own_common()
 {
 	real *r = new real;
 
@@ -15,7 +15,7 @@ test_proxy::test_proxy_real_subject_should_execute_its_own_common(void)
 }
 
 void
-test_proxy::test_proxy_proxy_subject_should_execute_its_own_common(void)
+test_proxy::test_proxy_proxy_subject_should_execute_its_own_common()
 {
 	real *r = new real;
 

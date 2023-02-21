@@ -2,7 +2,8 @@
 
 #include "interface.h"
 
+// contains business logic, its behavior should be enchanced
 class real : public interface {
     public:
-	std::string common() const override;
+	[[nodiscard]] auto common() const -> std::string override;
 };

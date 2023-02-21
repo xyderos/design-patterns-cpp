@@ -13,8 +13,8 @@ class test_proxy : public CPPUNIT_NS::TestCase {
 	void tearDown(void) { }
 
     protected:
-	void test_proxy_real_subject_should_execute_its_own_common(void);
-	void test_proxy_proxy_subject_should_execute_its_own_common(void);
+	void test_proxy_real_subject_should_execute_its_own_common();
+	void test_proxy_proxy_subject_should_execute_its_own_common();
 };
 
 CPPUNIT_TEST_SUITE_REGISTRATION(test_proxy);

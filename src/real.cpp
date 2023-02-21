@@ -1,7 +1,7 @@
 #include "real.h"
 
-std::string
-real::common() const
+auto
+real::common() const -> std::string
 {
 	return "real";
 }

@@ -45,3 +45,5 @@
 * Adapter provides different interface, proxy keeps the interface, decorator extends it
 
 * Facade and proxy are interchangable
+
+* Proxy manages the lifecycle, decorator lets it control by the client

@@ -1,10 +1,10 @@
 #include "fake.h"
 
-std::string
-fake::log() const
+auto
+fake::log() const -> std::string
 {
 	return "log";
-};
+}
 
 fake::fake(real *rl)
     : r(rl)
@@ -16,11 +16,12 @@ fake::fake(const fake &f)
 {
 }
 
-fake &
-fake::operator=(const fake &rhs)
+auto
+fake::operator=(const fake &rhs) -> fake &
 {
-	if (this == &rhs)
+	if (this == &rhs) {
 		return *this;
+	}
 
 	this->r = rhs.r;
 
@@ -32,8 +33,8 @@ fake::~fake()
 	delete r;
 }
 
-std::string
-fake::common() const
+auto
+fake::common() const -> std::string
 {
 	return "fakex" + this->r->common();
 }
