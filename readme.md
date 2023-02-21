@@ -35,4 +35,3 @@
 * Implement it in conjunction with command to have a cleaner interface
 
 * Implement it with an iterator in order to be able to perform business logic resotres/saves easier
-

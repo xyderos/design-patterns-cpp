@@ -2,6 +2,7 @@
 
 #include <string>
 
+// provide an interface to retrieve metadata
 class snapshot {
     public:
 	virtual ~snapshot();

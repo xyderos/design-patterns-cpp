@@ -5,6 +5,8 @@
 #include <string>
 #include <utility>
 
+// holds the state that might change over time, provides functionality for
+// saving and restoriing
 class originator {
     private:
 	std::string state_;

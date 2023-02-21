@@ -5,6 +5,8 @@
 
 #include <vector>
 
+// doesnt depend on a implementation clas, rarther than the interface
+// doenst have access to the actual state, works with all the snapshots
 class caretaker {
 
 	std::vector<snapshot *> snapshots;
