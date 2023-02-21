@@ -5,9 +5,9 @@
 #include "test_chain.h"
 
 void
-test_chain::test_chain_with_no_segments_should_return_default_values(void)
+test_chain::test_chain_with_no_segments_should_return_default_values()
 {
-	abstract_handler *a = new abstract_handler;
+	auto *a = new abstract_handler;
 
 	std::string expected("default");
 
@@ -17,11 +17,11 @@ test_chain::test_chain_with_no_segments_should_return_default_values(void)
 }
 
 void
-test_chain::test_chain_with_segments_should_return_correct_values(void)
+test_chain::test_chain_with_segments_should_return_correct_values()
 {
-	foo_handler *f = new foo_handler;
-	bar_handler *b = new bar_handler;
-	zot_handler *z = new zot_handler;
+	auto *f = new foo_handler;
+	auto *b = new bar_handler;
+	auto *z = new zot_handler;
 
 	f->set_next(b)->set_next(z);
 
@@ -35,12 +35,11 @@ test_chain::test_chain_with_segments_should_return_correct_values(void)
 }
 
 void
-test_chain::test_chain_with_segments_and_invalid_value_should_return_default(
-    void)
+test_chain::test_chain_with_segments_and_invalid_value_should_return_default()
 {
-	foo_handler *f = new foo_handler;
-	bar_handler *b = new bar_handler;
-	zot_handler *z = new zot_handler;
+	auto *f = new foo_handler;
+	auto *b = new bar_handler;
+	auto *z = new zot_handler;
 
 	f->set_next(b)->set_next(z);
 

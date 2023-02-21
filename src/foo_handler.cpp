@@ -1,7 +1,7 @@
 #include "foo_handler.h"
 
-std::string
-foo_handler::handle(std::string request)
+auto
+foo_handler::handle(std::string request) -> std::string
 {
 	return request == "foo" ? "handler:" + request :
 				  abstract_handler::handle(request);

@@ -1,6 +1,7 @@
 #include "abstract_handler.h"
 
+// either handle a request or pass it to the next handler
 class foo_handler : public abstract_handler {
     public:
-	std::string handle(std::string request) override;
+	auto handle(std::string request) -> std::string override;
 };

@@ -1,7 +1,7 @@
 #include "zot_handler.h"
 
-std::string
-zot_handler::handle(std::string request)
+auto
+zot_handler::handle(std::string request) -> std::string
 {
 	return request == "zot" ? "handler:" + request :
 				  abstract_handler::handle(request);

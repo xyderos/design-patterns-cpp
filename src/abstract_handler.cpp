@@ -10,30 +10,33 @@ abstract_handler::abstract_handler(const abstract_handler &ref)
 {
 }
 
-abstract_handler &
-abstract_handler::operator=(const abstract_handler &rhs)
+auto
+abstract_handler::operator=(const abstract_handler &rhs) -> abstract_handler &
 {
-	if (this == &rhs)
+	if (this == &rhs) {
 		return *this;
+	}
 
 	this->next_handler_ = rhs.next_handler_;
 
 	return *this;
 }
 
-handler *
-abstract_handler::set_next(handler *hndlr)
+auto
+abstract_handler::set_next(handler *hndlr) -> handler *
 {
+	// chain calls to handlers
 	this->next_handler_ = hndlr;
 
 	return hndlr;
 }
 
-std::string
-abstract_handler::handle(std::string request)
+auto
+abstract_handler::handle(std::string request) -> std::string
 {
-	if (this->next_handler_)
+	if (this->next_handler_) {
 		return this->next_handler_->handle(request);
+	}
 
 	return "default";
 }

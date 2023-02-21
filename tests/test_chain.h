@@ -16,10 +16,9 @@ class test_chain : public CPPUNIT_NS::TestCase {
 	void tearDown(void) { }
 
     protected:
-	void test_chain_with_no_segments_should_return_default_values(void);
-	void test_chain_with_segments_should_return_correct_values(void);
-	void test_chain_with_segments_and_invalid_value_should_return_default(
-	    void);
+	void test_chain_with_no_segments_should_return_default_values();
+	void test_chain_with_segments_should_return_correct_values();
+	void test_chain_with_segments_and_invalid_value_should_return_default();
 };
 
 CPPUNIT_TEST_SUITE_REGISTRATION(test_chain);

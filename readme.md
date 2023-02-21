@@ -41,4 +41,6 @@ Transform each part of the handling process into a series of steps called handle
 
 * Can be used in conjunction with composite, upon entering a leaf, pass along the request to the root
 
+* Handlers can be implemented as commands, execute multiple operations over a complex object
+
 * Kind of similar to the decorator, but one can break up things and extend it whereas the other one extends the functionality while keeping the same interface
