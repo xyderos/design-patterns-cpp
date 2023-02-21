@@ -2,6 +2,7 @@
 
 #include "command.h"
 
+// the client sends the request to the commands
 class client {
     private:
 	command *on_start;

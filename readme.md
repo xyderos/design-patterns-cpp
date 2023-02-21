@@ -42,4 +42,10 @@
 
 * Handlers in chain or responsibility can be commands, execute a lot of operations over the same context
 
+* Command and snapshot can work together to impement undo, commands do give orders and work on objects while snapshots change the state of the object
+
+* Command converts any operation into an object, parameters become fields, strategy describes different ways of doing a thing, swapping methods based on context
+
 * Prototype can be used to store state or history
+
+* Combine with an iterator to work over multiple objects

@@ -20,17 +20,13 @@ class test_command : public CPPUNIT_NS::TestCase {
 
     protected:
 	void
-	test_command_calling_with_simple_command_should_return_correct_values(
-	    void);
+	test_command_calling_with_simple_command_should_return_correct_values();
 	void
-	test_command_calling_with_complex_command_should_return_correct_values(
-	    void);
+	test_command_calling_with_complex_command_should_return_correct_values();
 	void
-	test_command_calling_with_simple_and_complex_commands_should_return_correct_values(
-	    void);
+	test_command_calling_with_simple_and_complex_commands_should_return_correct_values();
 	void
-	test_command_calling_with_no_command_handlers_should_return_empty_value(
-	    void);
+	test_command_calling_with_no_command_handlers_should_return_empty_value();
 };
 
 CPPUNIT_TEST_SUITE_REGISTRATION(test_command);

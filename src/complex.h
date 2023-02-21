@@ -3,6 +3,7 @@
 #include "business_logic.h"
 #include "command.h"
 
+// delegate work to other objects, receivers
 class complex : public command {
     private:
 	business_logic *bl;
