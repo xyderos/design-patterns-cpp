@@ -13,7 +13,7 @@ class test_adapter : public CPPUNIT_NS::TestCase {
 	void tearDown(void) { }
 
     protected:
-	void test_adapter_should_adapt_non_adaptable_object_to_the_target(void);
+	void test_adapter_should_adapt_non_adaptable_object_to_the_target();
 };
 
 CPPUNIT_TEST_SUITE_REGISTRATION(test_adapter);

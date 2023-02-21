@@ -33,3 +33,15 @@ Essentially a wrapper that hides complexity and the conversion process
 ## Cons
 
 * Complexity increases upon introducting a new set of interfaces and classes
+
+## Things to consider
+
+* Bridge is designed before singleton to make stuff independent from other stuff in your application, adapter is an extension to make incompatible things work
+
+* Adapter changes the interface, decorator enhances it witout changing the interface
+
+* Compared to the cedorator that enhances the interface or the proxy that provides the same interface, adapter changes the interface
+
+* Facade defines a new interface, adapter tries to make the interface usable
+
+* Delegates the work to other objects

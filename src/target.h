@@ -2,9 +2,10 @@
 
 #include <string>
 
+// specific interface used by the client code
 class target {
     public:
 	virtual ~target() = default;
 
-	virtual std::string message() const;
+	[[nodiscard]] virtual auto message() const -> std::string;
 };

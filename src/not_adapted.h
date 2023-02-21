@@ -2,7 +2,8 @@
 
 #include <string>
 
+// some business logic that is not compatible with our interface
 class not_adapted {
     public:
-	std::string message() const;
+	[[nodiscard]] auto message() const -> std::string;
 };

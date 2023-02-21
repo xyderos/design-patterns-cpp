@@ -1,7 +1,7 @@
 #include "not_adapted.h"
 
-std::string
-not_adapted::message() const
+auto
+not_adapted::message() const -> std::string
 {
 	return "hello!";
 }

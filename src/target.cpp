@@ -1,7 +1,7 @@
 #include "target.h"
 
-std::string
-target::message() const
+auto
+target::message() const -> std::string
 {
 	return "hi!";
 }
