@@ -3,6 +3,9 @@
 #include "state_machine.h"
 class context;
 
+// base interface for all the concrete states and provides a reference to the
+// context it is associated with
+// can use it to change the state of the context
 class state {
 
     protected:

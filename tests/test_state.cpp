@@ -7,9 +7,9 @@
 #include "test_state.h"
 
 void
-test_state::test_state_should_change_states_from_an_action_for_a_state(void)
+test_state::test_state_should_change_states_from_an_action_for_a_state()
 {
-	context *c = new context(new a_state);
+	auto *c = new context(new a_state);
 
 	c->perform_an_action();
 
@@ -20,10 +20,9 @@ test_state::test_state_should_change_states_from_an_action_for_a_state(void)
 }
 
 void
-test_state::test_state_should_change_states_from_another_action_for_a_state(
-    void)
+test_state::test_state_should_change_states_from_another_action_for_a_state()
 {
-	context *c = new context(new a_state);
+	auto *c = new context(new a_state);
 
 	c->perform_another_action();
 
@@ -33,10 +32,9 @@ test_state::test_state_should_change_states_from_another_action_for_a_state(
 }
 
 void
-test_state::test_state_should_change_states_from_an_action_for_another_state(
-    void)
+test_state::test_state_should_change_states_from_an_action_for_another_state()
 {
-	context *c = new context(new another_state);
+	auto *c = new context(new another_state);
 
 	c->perform_an_action();
 
@@ -47,9 +45,9 @@ test_state::test_state_should_change_states_from_an_action_for_another_state(
 
 void
 test_state::
-    test_state_should_change_states_from_another_action_for_another_state(void)
+    test_state_should_change_states_from_another_action_for_another_state()
 {
-	context *c = new context(new another_state);
+	auto *c = new context(new another_state);
 
 	c->perform_another_action();
 

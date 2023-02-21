@@ -33,3 +33,5 @@
 ## Things to consider
 
 * Similar structure to adapter and bridge, delegating work to other objects
+
+* An extension of strategy, strategy makes them completely independent and unaware of ech other, state letting them change the state of the context at will

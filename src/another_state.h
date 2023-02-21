@@ -2,6 +2,7 @@
 
 #include "state.h"
 
+// some state
 class another_state : public state {
     public:
 	void handle_an_action() override;

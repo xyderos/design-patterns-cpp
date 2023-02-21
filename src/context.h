@@ -3,10 +3,9 @@
 #include "state.h"
 #include "state_machine.h"
 
+// interface of interest, keeps a reference to the state which represetnts the
+// current state
 class context {
-	/**
-	 * @var State A reference to the current state of the Context.
-	 */
     private:
 	state *state_;
 	state_machine_t current_state;
