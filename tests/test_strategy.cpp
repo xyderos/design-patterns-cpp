@@ -4,9 +4,8 @@
 #include "test_strategy.h"
 
 void
-test_strategy::test_strategy_of_a_strategy_should_be_okay(void)
+test_strategy::test_strategy_of_a_strategy_should_be_okay()
 {
-
 	context ctx(std::make_unique<a_strategy>());
 
 	auto result = ctx.business_logic();
@@ -17,9 +16,8 @@ test_strategy::test_strategy_of_a_strategy_should_be_okay(void)
 
 void
 test_strategy::
-    test_strategy_of_a_strategy_with_changing_strategy_should_be_okay(void)
+    test_strategy_of_a_strategy_with_changing_strategy_should_be_okay()
 {
-
 	context ctx(std::make_unique<a_strategy>());
 
 	auto result = ctx.business_logic();

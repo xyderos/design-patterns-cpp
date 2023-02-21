@@ -38,4 +38,8 @@
 
 * State is sort of an extension of strategy, both are based in composition
 
+* Command let you dfer the execution of the operation, strategy lets you swap implementations based on the context
+
 * Decorator extends, strategy changes
+
+* Template is based on imheritance, strategy on composition

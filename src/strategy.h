@@ -2,6 +2,7 @@
 
 #include <string>
 
+// define common operations for the implementation code
 class strategy {
     public:
 	virtual ~strategy() = default;
