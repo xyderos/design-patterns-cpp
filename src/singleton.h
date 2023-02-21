@@ -9,7 +9,7 @@ class singleton {
 
     protected:
 	// prevent explicit construction and destruction
-	singleton(const std::string &s);
+	explicit singleton(std::string s);
 	~singleton();
 	std::string msg;
 
@@ -19,10 +19,12 @@ class singleton {
 	// prevent reassigning
 	void operator=(const singleton &) = delete;
 
-	// get the instance
-	static singleton *get_instance(const std::string &value);
+	// get the instance, this acts as a constructor for the object
+	static auto get_instance(const std::string &value) -> singleton *;
 
 	void business_logic();
 
-	std::string message() const;
+	[[nodiscard]] auto message() const -> std::string;
+
+	static void destroy();
 };

@@ -56,6 +56,10 @@ Much stricter control over global and shared resources
 
 ## Things to consider
 
+* Facade can be transformed to a singleton since a single object is sufficient in most cases
+
+* Flyweight would resemble singleton if it could reduce all the shared states into one object
+
 * Bridge is designed before hand, adaper is usually an "addon"
 
 * Adapter changes the interface, decorator enchances it

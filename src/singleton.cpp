@@ -2,8 +2,8 @@
 
 singleton *singleton::instance = nullptr;
 
-singleton *
-singleton::get_instance(const std::string &value)
+auto
+singleton::get_instance(const std::string &value) -> singleton *
 {
 	if (!singleton::instance) {
 		singleton::instance = new singleton(value);
@@ -12,21 +12,26 @@ singleton::get_instance(const std::string &value)
 }
 
 void
+singleton::destroy()
+{
+	delete instance;
+	instance = nullptr;
+}
+
+void
 singleton::business_logic()
 {
 }
 
-std::string
-singleton::message() const
+auto
+singleton::message() const -> std::string
 {
 	return this->msg;
 }
 
-singleton::singleton(const std::string &s)
-    : msg(s)
+singleton::singleton(std::string s)
+    : msg(std::move(s))
 {
 }
 
-singleton::~singleton()
-{
-}
+singleton::~singleton() = default;

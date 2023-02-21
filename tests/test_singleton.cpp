@@ -3,10 +3,10 @@
 
 #include <thread>
 
-std::string r1;
-std::string r2;
+static std::string r1;
+static std::string r2;
 
-void
+static void
 foo()
 {
 	std::this_thread::sleep_for(std::chrono::milliseconds(1000));
@@ -14,7 +14,7 @@ foo()
 	r1 = singleton->message();
 }
 
-void
+static void
 bar()
 {
 	std::this_thread::sleep_for(std::chrono::milliseconds(1000));
@@ -23,12 +23,14 @@ bar()
 }
 
 void
-test_singleton::test_singleton_multithreaded(void)
+test_singleton::test_singleton_multithreaded()
 {
 	std::thread t1(foo);
 	std::thread t2(bar);
 	t1.join();
 	t2.join();
+
+	singleton::destroy();
 
 	CPPUNIT_ASSERT_EQUAL(r1, r2);
 }
