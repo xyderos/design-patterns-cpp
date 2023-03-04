@@ -7,7 +7,7 @@
 void
 test_decorators::decorator_should_decorate_a_component()
 {
-	component *simple = new concrete;
+	decorator_component *simple = new concrete;
 
 	std::string expected("concrete");
 
@@ -19,14 +19,14 @@ test_decorators::decorator_should_decorate_a_component()
 void
 test_decorators::decorator_should_decorate_both_components()
 {
-	component *simple = new concrete;
+	decorator_component *simple = new concrete;
 
-	component *either = new either_decorator(simple);
+	decorator_component *either = new either_decorator(simple);
 	std::string expected_from_either("either x concrete");
 
 	CPPUNIT_ASSERT_EQUAL(expected_from_either, either->message());
 
-	component *other = new other_decorator(simple);
+	decorator_component *other = new other_decorator(simple);
 	std::string expected_from_other("other x concrete");
 
 	CPPUNIT_ASSERT_EQUAL(expected_from_other, other->message());
@@ -39,10 +39,10 @@ test_decorators::decorator_should_decorate_both_components()
 void
 test_decorators::decorator_should_decorate_another_decorator()
 {
-	component *simple = new concrete;
+	decorator_component *simple = new concrete;
 
-	component *either = new either_decorator(simple);
-	component *other = new other_decorator(either);
+	decorator_component *either = new either_decorator(simple);
+	decorator_component *other = new other_decorator(either);
 	std::string expected("other x either x concrete");
 
 	CPPUNIT_ASSERT_EQUAL(expected, other->message());

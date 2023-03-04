@@ -7,6 +7,6 @@
 class either_decorator : public decorator {
 
     public:
-	explicit either_decorator(component *);
+	explicit either_decorator(decorator_component *);
 	[[nodiscard]] auto message() const -> std::string override;
 };

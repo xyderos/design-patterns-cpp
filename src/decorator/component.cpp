@@ -1,3 +1,3 @@
 #include "component.h"
 
-component::~component() = default;
+decorator_component::~decorator_component() = default;

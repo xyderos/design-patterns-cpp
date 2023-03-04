@@ -3,8 +3,8 @@
 #include <string>
 
 // base interface defines the operations that can be changed by the decorators
-class component {
+class decorator_component {
     public:
-	virtual ~component();
+	virtual ~decorator_component();
 	[[nodiscard]] virtual auto message() const -> std::string = 0;
 };

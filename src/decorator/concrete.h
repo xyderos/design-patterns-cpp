@@ -3,7 +3,7 @@
 #include "component.h"
 
 // default implementation of operations
-class concrete : public component {
+class concrete : public decorator_component {
 
     public:
 	[[nodiscard]] auto message() const -> std::string override;

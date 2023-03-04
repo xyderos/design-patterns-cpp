@@ -1,6 +1,6 @@
 #include "either_decorator.h"
 
-either_decorator::either_decorator(component *c)
+either_decorator::either_decorator(decorator_component *c)
     : decorator(c)
 {
 }

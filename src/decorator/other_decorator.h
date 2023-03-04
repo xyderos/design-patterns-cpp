@@ -7,6 +7,6 @@
 class other_decorator : public decorator {
 
     public:
-	explicit other_decorator(component *component);
+	explicit other_decorator(decorator_component *component);
 	[[nodiscard]] auto message() const -> std::string override;
 };

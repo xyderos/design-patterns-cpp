@@ -1,6 +1,6 @@
 #include "decorator.h"
 
-decorator::decorator(component *c)
+decorator::decorator(decorator_component *c)
     : comp(c)
 {
 }
