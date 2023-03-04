@@ -1,5 +1,5 @@
-#include "../src/an_implementation.h"
-#include "../src/another_implementation.h"
+#include "../../src/template/an_implementation.h"
+#include "../../src/template/another_implementation.h"
 #include "test_template.h"
 
 void
