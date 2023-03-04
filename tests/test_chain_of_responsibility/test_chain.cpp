@@ -1,7 +1,7 @@
-#include "../src/abstract_handler.h"
-#include "../src/bar_handler.h"
-#include "../src/foo_handler.h"
-#include "../src/zot_handler.h"
+#include "../../src/chain_of_responsibility/abstract_handler.h"
+#include "../../src/chain_of_responsibility/bar_handler.h"
+#include "../../src/chain_of_responsibility/foo_handler.h"
+#include "../../src/chain_of_responsibility/zot_handler.h"
 #include "test_chain.h"
 
 void
