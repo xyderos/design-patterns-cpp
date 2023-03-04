@@ -1,4 +1,4 @@
-#include "../src/leaf.h"
+#include "../../src/composite/leaf.h"
 #include "test_simple_component.h"
 
 void

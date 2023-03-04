@@ -1,6 +1,6 @@
-#include "../src/component.h"
-#include "../src/composite.h"
-#include "../src/leaf.h"
+#include "../../src/composite/component.h"
+#include "../../src/composite/composite.h"
+#include "../../src/composite/leaf.h"
 #include "test_complex_components.h"
 
 void
