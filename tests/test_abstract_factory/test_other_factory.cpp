@@ -1,4 +1,4 @@
-#include "../src/other_factory.h"
+#include "../../src/abstract_factory/other_factory.h"
 #include "test_other_factory.h"
 
 void

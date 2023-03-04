@@ -1,7 +1,7 @@
 #include <cppunit/extensions/HelperMacros.h>
 
-#include "../src/either_factory.h"
-#include "../src/saab.h"
+#include "../../src/abstract_factory/either_factory.h"
+#include "../../src/abstract_factory/saab.h"
 #include "test_either_factory.h"
 
 void
