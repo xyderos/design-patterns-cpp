@@ -1,0 +1,168 @@
+==66493== Memcheck, a memory error detector
+==66493== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==66493== Using Valgrind-3.18.1-42b08ed5bd-20211015 and LibVEX; rerun with -h for copyright info
+==66493== Command: ./executable
+==66493== Parent PID: 66437
+==66493== 
+--66493-- 
+--66493-- Valgrind options:
+--66493--    --leak-check=full
+--66493--    --show-leak-kinds=all
+--66493--    --track-origins=yes
+--66493--    --verbose
+--66493--    --log-file=valgrind_results.txt
+--66493-- Contents of /proc/version:
+--66493--   Linux version 5.19.0-35-generic (buildd@lcy02-amd64-014) (x86_64-linux-gnu-gcc-12 (Ubuntu 12.2.0-3ubuntu1) 12.2.0, GNU ld (GNU Binutils for Ubuntu) 2.39) #36-Ubuntu SMP PREEMPT_DYNAMIC Fri Feb 3 18:36:56 UTC 2023
+--66493-- 
+--66493-- Arch and hwcaps: AMD64, LittleEndian, amd64-cx16-lzcnt-rdtscp-sse3-ssse3-avx-avx2-bmi-f16c-rdrand-rdseed
+--66493-- Page sizes: currently 4096, max supported 4096
+--66493-- Valgrind library directory: /usr/libexec/valgrind
+--66493-- Reading syms from /home/xyderos/Documents/design-patterns-cpp/executable
+--66493-- Reading syms from /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+--66493--   Considering /usr/lib/debug/.build-id/29/2e105c0bb3ee8e8f5b917f8af764373d206659.debug ..
+--66493--   .. build-id is valid
+--66493-- Reading syms from /usr/libexec/valgrind/memcheck-amd64-linux
+--66493--    object doesn't have a symbol table
+--66493--    object doesn't have a dynamic symbol table
+--66493-- Scheduler: using generic scheduler lock implementation.
+--66493-- Reading suppressions file: /usr/libexec/valgrind/default.supp
+==66493== embedded gdbserver: reading from /tmp/vgdb-pipe-from-vgdb-to-66493-by-xyderos-on-???
+==66493== embedded gdbserver: writing to   /tmp/vgdb-pipe-to-vgdb-from-66493-by-xyderos-on-???
+==66493== embedded gdbserver: shared mem   /tmp/vgdb-pipe-shared-mem-vgdb-66493-by-xyderos-on-???
+==66493== 
+==66493== TO CONTROL THIS PROCESS USING vgdb (which you probably
+==66493== don't want to do, unless you know exactly what you're doing,
+==66493== or are doing some strange experiment):
+==66493==   /usr/bin/vgdb --pid=66493 ...command...
+==66493== 
+==66493== TO DEBUG THIS PROCESS USING GDB: start GDB like this
+==66493==   /path/to/gdb ./executable
+==66493== and then give GDB the following command
+==66493==   target remote | /usr/bin/vgdb --pid=66493
+==66493== --pid is optional if only one valgrind process is running
+==66493== 
+--66493-- REDIR: 0x4026dd0 (ld-linux-x86-64.so.2:strlen) redirected to 0x580bcec2 (???)
+--66493-- REDIR: 0x4025580 (ld-linux-x86-64.so.2:index) redirected to 0x580bcedc (???)
+--66493-- Reading syms from /usr/libexec/valgrind/vgpreload_core-amd64-linux.so
+--66493--    object doesn't have a symbol table
+--66493-- Reading syms from /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so
+--66493--    object doesn't have a symbol table
+==66493== WARNING: new redirection conflicts with existing -- ignoring it
+--66493--     old: 0x04026dd0 (strlen              ) R-> (0000.0) 0x580bcec2 ???
+--66493--     new: 0x04026dd0 (strlen              ) R-> (2007.0) 0x0484ae30 strlen
+--66493-- REDIR: 0x40257b0 (ld-linux-x86-64.so.2:strcmp) redirected to 0x484bcd0 (strcmp)
+--66493-- REDIR: 0x40249d0 (ld-linux-x86-64.so.2:mempcpy) redirected to 0x484f840 (mempcpy)
+--66493-- Reading syms from /usr/lib/x86_64-linux-gnu/libcppunit-1.15.so.1.0.0
+--66493--    object doesn't have a symbol table
+--66493-- Reading syms from /home/xyderos/Documents/design-patterns-cpp/libmod.so
+--66493-- Reading syms from /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30
+--66493--    object doesn't have a symbol table
+--66493-- Reading syms from /usr/lib/x86_64-linux-gnu/libm.so.6
+--66493--   Considering /usr/lib/debug/.build-id/69/c0f56e574b311a0d256e8ede640fab11c1407d.debug ..
+--66493--   .. build-id is valid
+--66493-- Reading syms from /usr/lib/x86_64-linux-gnu/libgcc_s.so.1
+--66493--    object doesn't have a symbol table
+--66493-- Reading syms from /usr/lib/x86_64-linux-gnu/libc.so.6
+--66493--   Considering /usr/lib/debug/.build-id/d1/704d25fbbb72fa95d517b883131828c0883fe9.debug ..
+--66493--   .. build-id is valid
+==66493== WARNING: new redirection conflicts with existing -- ignoring it
+--66493--     old: 0x04c851d0 (memalign            ) R-> (1011.0) 0x0484a080 memalign
+--66493--     new: 0x04c851d0 (memalign            ) R-> (1017.0) 0x0484a050 aligned_alloc
+==66493== WARNING: new redirection conflicts with existing -- ignoring it
+--66493--     old: 0x04c851d0 (memalign            ) R-> (1011.0) 0x0484a080 memalign
+--66493--     new: 0x04c851d0 (memalign            ) R-> (1017.0) 0x0484a020 aligned_alloc
+--66493-- REDIR: 0x4c8c040 (libc.so.6:strnlen) redirected to 0x483b220 (_vgnU_ifunc_wrapper)
+--66493-- REDIR: 0x4c8c0d0 (libc.so.6:strpbrk) redirected to 0x483b220 (_vgnU_ifunc_wrapper)
+--66493-- REDIR: 0x4c8a1a0 (libc.so.6:strcmp) redirected to 0x483b220 (_vgnU_ifunc_wrapper)
+--66493-- REDIR: 0x4ca1660 (libc.so.6:wcsnlen) redirected to 0x483b220 (_vgnU_ifunc_wrapper)
+--66493-- REDIR: 0x4c892b0 (libc.so.6:memset) redirected to 0x483b220 (_vgnU_ifunc_wrapper)
+--66493-- REDIR: 0x4c9fd30 (libc.so.6:wcslen) redirected to 0x483b220 (_vgnU_ifunc_wrapper)
+--66493-- REDIR: 0x4c88790 (libc.so.6:memcpy@@GLIBC_2.14) redirected to 0x483b220 (_vgnU_ifunc_wrapper)
+--66493-- REDIR: 0x4c9fb40 (libc.so.6:wcschr) redirected to 0x483b220 (_vgnU_ifunc_wrapper)
+--66493-- REDIR: 0x4c8a090 (libc.so.6:index) redirected to 0x483b220 (_vgnU_ifunc_wrapper)
+--66493-- REDIR: 0x4c8c100 (libc.so.6:rindex) redirected to 0x483b220 (_vgnU_ifunc_wrapper)
+--66493-- REDIR: 0x4c9fbd0 (libc.so.6:wcscmp) redirected to 0x483b220 (_vgnU_ifunc_wrapper)
+--66493-- REDIR: 0x4c89500 (libc.so.6:stpncpy) redirected to 0x483b220 (_vgnU_ifunc_wrapper)
+--66493-- REDIR: 0x4ca0180 (libc.so.6:wmemchr) redirected to 0x483b220 (_vgnU_ifunc_wrapper)
+--66493-- REDIR: 0x4c8bee0 (libc.so.6:strncmp) redirected to 0x483b220 (_vgnU_ifunc_wrapper)
+--66493-- REDIR: 0x4c89570 (libc.so.6:strcasecmp) redirected to 0x483b220 (_vgnU_ifunc_wrapper)
+--66493-- REDIR: 0x4c8b3f0 (libc.so.6:strcspn) redirected to 0x483b220 (_vgnU_ifunc_wrapper)
+--66493-- REDIR: 0x4c9fc60 (libc.so.6:wcscpy) redirected to 0x483b220 (_vgnU_ifunc_wrapper)
+--66493-- REDIR: 0x4c8a010 (libc.so.6:strcat) redirected to 0x483b220 (_vgnU_ifunc_wrapper)
+--66493-- REDIR: 0x4c8bdd0 (libc.so.6:strncasecmp_l) redirected to 0x483b220 (_vgnU_ifunc_wrapper)
+--66493-- REDIR: 0x4c88690 (libc.so.6:bcmp) redirected to 0x483b220 (_vgnU_ifunc_wrapper)
+--66493-- REDIR: 0x4c89220 (libc.so.6:memrchr) redirected to 0x483b220 (_vgnU_ifunc_wrapper)
+--66493-- REDIR: 0x4c8a110 (libc.so.6:strchrnul) redirected to 0x483b220 (_vgnU_ifunc_wrapper)
+--66493-- REDIR: 0x4c8b370 (libc.so.6:strcpy) redirected to 0x483b220 (_vgnU_ifunc_wrapper)
+--66493-- REDIR: 0x4c89610 (libc.so.6:strcasecmp_l) redirected to 0x483b220 (_vgnU_ifunc_wrapper)
+--66493-- REDIR: 0x4c8bca0 (libc.so.6:strlen) redirected to 0x483b220 (_vgnU_ifunc_wrapper)
+--66493-- REDIR: 0x4c8bf80 (libc.so.6:strncpy) redirected to 0x483b220 (_vgnU_ifunc_wrapper)
+--66493-- REDIR: 0x4c89480 (libc.so.6:stpcpy) redirected to 0x483b220 (_vgnU_ifunc_wrapper)
+--66493-- REDIR: 0x4c88fe0 (libc.so.6:memmove) redirected to 0x483b220 (_vgnU_ifunc_wrapper)
+==66493== Preferring higher priority redirection:
+--66493--     old: 0x04d55c00 (__memcpy_avx_unalign) R-> (2018.0) 0x0484cf90 __memcpy_avx_unaligned_erms
+--66493--     new: 0x04d55c00 (__memcpy_avx_unalign) R-> (2018.1) 0x0484e880 memmove
+--66493-- REDIR: 0x4c88600 (libc.so.6:memchr) redirected to 0x483b220 (_vgnU_ifunc_wrapper)
+--66493-- REDIR: 0x4c8c2c0 (libc.so.6:strspn) redirected to 0x483b220 (_vgnU_ifunc_wrapper)
+--66493-- REDIR: 0x4c89100 (libc.so.6:mempcpy) redirected to 0x483b220 (_vgnU_ifunc_wrapper)
+--66493-- REDIR: 0x4c8bd30 (libc.so.6:strncasecmp) redirected to 0x483b220 (_vgnU_ifunc_wrapper)
+--66493-- REDIR: 0x4c893b0 (libc.so.6:rawmemchr) redirected to 0x483b220 (_vgnU_ifunc_wrapper)
+--66493-- REDIR: 0x4d5bcf0 (libc.so.6:__strrchr_avx2) redirected to 0x484a810 (rindex)
+--66493-- REDIR: 0x4c84660 (libc.so.6:malloc) redirected to 0x4844820 (malloc)
+--66493-- REDIR: 0x4d593a0 (libc.so.6:__strlen_avx2) redirected to 0x484ad10 (strlen)
+--66493-- REDIR: 0x4d554a0 (libc.so.6:__memcmp_avx2_movbe) redirected to 0x484e010 (bcmp)
+--66493-- REDIR: 0x4d58ab0 (libc.so.6:__strcmp_avx2) redirected to 0x484bbd0 (strcmp)
+--66493-- REDIR: 0x4d55c00 (libc.so.6:__memcpy_avx_unaligned_erms) redirected to 0x484e880 (memmove)
+--66493-- REDIR: 0x495dab0 (libstdc++.so.6:operator new(unsigned long)) redirected to 0x4844fa0 (operator new(unsigned long))
+--66493-- REDIR: 0x4d5aa70 (libc.so.6:__strncmp_avx2) redirected to 0x484b3e0 (strncmp)
+--66493-- REDIR: 0x4c84cd0 (libc.so.6:realloc) redirected to 0x4849c50 (realloc)
+--66493-- REDIR: 0x4c84970 (libc.so.6:free) redirected to 0x4847210 (free)
+--66493-- REDIR: 0x495bd50 (libstdc++.so.6:operator delete(void*)) redirected to 0x4847840 (operator delete(void*))
+--66493-- REDIR: 0x4d56600 (libc.so.6:__memset_avx2_unaligned_erms) redirected to 0x484e770 (memset)
+--66493-- REDIR: 0x495bd60 (libstdc++.so.6:operator delete(void*, unsigned long)) redirected to 0x4847b00 (operator delete(void*, unsigned long))
+--66493-- REDIR: 0x4c85a60 (libc.so.6:calloc) redirected to 0x48499d0 (calloc)
+--66493-- REDIR: 0x4d55bc0 (libc.so.6:__mempcpy_avx_unaligned_erms) redirected to 0x484f440 (mempcpy)
+==66493== 
+==66493== HEAP SUMMARY:
+==66493==     in use at exit: 32 bytes in 2 blocks
+==66493==   total heap usage: 102 allocs, 100 frees, 84,539 bytes allocated
+==66493== 
+==66493== Searching for pointers to 2 not-freed blocks
+==66493== Checked 161,888 bytes
+==66493== 
+==66493== 16 bytes in 1 blocks are definitely lost in loss record 1 of 2
+==66493==    at 0x4845013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==66493==    by 0x10CA3D: container<data>::make_iterator() (container.h:17)
+==66493==    by 0x10C677: test_container_complex::test_container_adding_complex_items_should_be_okay() (test_container_complex.cpp:20)
+==66493==    by 0x10F9D8: void std::__invoke_impl<void, void (test_container_complex::*&)(), test_container_complex*&>(std::__invoke_memfun_deref, void (test_container_complex::*&)(), test_container_complex*&) (invoke.h:74)
+==66493==    by 0x10F91C: std::__invoke_result<void (test_container_complex::*&)(), test_container_complex*&>::type std::__invoke<void (test_container_complex::*&)(), test_container_complex*&>(void (test_container_complex::*&)(), test_container_complex*&) (invoke.h:96)
+==66493==    by 0x10F8DC: void std::_Bind<void (test_container_complex::*(test_container_complex*))()>::__call<void, , 0ul>(std::tuple<>&&, std::_Index_tuple<0ul>) (functional:484)
+==66493==    by 0x10F895: void std::_Bind<void (test_container_complex::*(test_container_complex*))()>::operator()<, void>() (functional:567)
+==66493==    by 0x10F864: void std::__invoke_impl<void, std::_Bind<void (test_container_complex::*(test_container_complex*))()>&>(std::__invoke_other, std::_Bind<void (test_container_complex::*(test_container_complex*))()>&) (invoke.h:61)
+==66493==    by 0x10F824: std::enable_if<is_invocable_r_v<void, std::_Bind<void (test_container_complex::*(test_container_complex*))()>&>, void>::type std::__invoke_r<void, std::_Bind<void (test_container_complex::*(test_container_complex*))()>&>(std::_Bind<void (test_container_complex::*(test_container_complex*))()>&) (invoke.h:111)
+==66493==    by 0x10F61C: std::_Function_handler<void (), std::_Bind<void (test_container_complex::*(test_container_complex*))()> >::_M_invoke(std::_Any_data const&) (std_function.h:290)
+==66493==    by 0x10FC44: std::function<void ()>::operator()() const (std_function.h:591)
+==66493==    by 0x10F408: CppUnit::TestCaller<test_container_complex>::runTest() (TestCaller.h:175)
+==66493== 
+==66493== 16 bytes in 1 blocks are definitely lost in loss record 2 of 2
+==66493==    at 0x4845013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==66493==    by 0x110C6D: container<int>::make_iterator() (container.h:17)
+==66493==    by 0x1108A6: test_container_simple::test_container_adding_simple_items_should_be_okay() (test_container_simple.cpp:20)
+==66493==    by 0x111FE8: void std::__invoke_impl<void, void (test_container_simple::*&)(), test_container_simple*&>(std::__invoke_memfun_deref, void (test_container_simple::*&)(), test_container_simple*&) (invoke.h:74)
+==66493==    by 0x111F2C: std::__invoke_result<void (test_container_simple::*&)(), test_container_simple*&>::type std::__invoke<void (test_container_simple::*&)(), test_container_simple*&>(void (test_container_simple::*&)(), test_container_simple*&) (invoke.h:96)
+==66493==    by 0x111EFC: void std::_Bind<void (test_container_simple::*(test_container_simple*))()>::__call<void, , 0ul>(std::tuple<>&&, std::_Index_tuple<0ul>) (functional:484)
+==66493==    by 0x111EB5: void std::_Bind<void (test_container_simple::*(test_container_simple*))()>::operator()<, void>() (functional:567)
+==66493==    by 0x111E84: void std::__invoke_impl<void, std::_Bind<void (test_container_simple::*(test_container_simple*))()>&>(std::__invoke_other, std::_Bind<void (test_container_simple::*(test_container_simple*))()>&) (invoke.h:61)
+==66493==    by 0x111E44: std::enable_if<is_invocable_r_v<void, std::_Bind<void (test_container_simple::*(test_container_simple*))()>&>, void>::type std::__invoke_r<void, std::_Bind<void (test_container_simple::*(test_container_simple*))()>&>(std::_Bind<void (test_container_simple::*(test_container_simple*))()>&) (invoke.h:111)
+==66493==    by 0x111C9C: std::_Function_handler<void (), std::_Bind<void (test_container_simple::*(test_container_simple*))()> >::_M_invoke(std::_Any_data const&) (std_function.h:290)
+==66493==    by 0x10FC44: std::function<void ()>::operator()() const (std_function.h:591)
+==66493==    by 0x111AA8: CppUnit::TestCaller<test_container_simple>::runTest() (TestCaller.h:175)
+==66493== 
+==66493== LEAK SUMMARY:
+==66493==    definitely lost: 32 bytes in 2 blocks
+==66493==    indirectly lost: 0 bytes in 0 blocks
+==66493==      possibly lost: 0 bytes in 0 blocks
+==66493==    still reachable: 0 bytes in 0 blocks
+==66493==         suppressed: 0 bytes in 0 blocks
+==66493== 
+==66493== ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 0 from 0)
