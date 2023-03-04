@@ -10,18 +10,18 @@ composite::composite()
 composite::~composite()
 {
 	std::for_each(this->children.begin(), this->children.end(),
-	    [](component *c) { delete c; });
+	    [](composite_component *c) { delete c; });
 }
 
 void
-composite::add(component *c)
+composite::add(composite_component *c)
 {
 	this->children.push_back(c);
 	c->set_parent(this);
 }
 
 void
-composite::remove(component *c)
+composite::remove(composite_component *c)
 {
 	// TODO free up the memory
 	this->children.remove(c);
@@ -35,13 +35,13 @@ composite::is_composite() const -> bool
 	return true;
 }
 
-std::string
-composite::name() const
+auto
+composite::name() const -> std::string
 {
 	std::string result;
 
 	std::for_each(this->children.begin(), this->children.end(),
-	    [&](const component *ref) {
+	    [&](const composite_component *ref) {
 		    if (ref == this->children.back()) {
 			    result += ref->name();
 

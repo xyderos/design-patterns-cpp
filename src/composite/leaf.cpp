@@ -1,7 +1,7 @@
 #include "leaf.h"
 
 leaf::leaf()
-    : component()
+    : composite_component()
 {
 }
 

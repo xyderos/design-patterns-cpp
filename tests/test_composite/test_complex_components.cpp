@@ -6,11 +6,11 @@
 void
 test_complex_components::test_complex_composite_should_generate_leafs()
 {
-	component *tree = new composite;
-	component *either_branch = new composite;
+	composite_component *tree = new composite;
+	composite_component *either_branch = new composite;
 
-	component *leaf_1 = new leaf;
-	component *leaf_2 = new leaf;
+	composite_component *leaf_1 = new leaf;
+	composite_component *leaf_2 = new leaf;
 
 	either_branch->add(leaf_1);
 	either_branch->add(leaf_2);
@@ -26,17 +26,17 @@ test_complex_components::test_complex_composite_should_generate_leafs()
 void
 test_complex_components::test_complex_composite_should_generate_a_tree()
 {
-	component *tree = new composite;
-	component *either_branch = new composite;
+	composite_component *tree = new composite;
+	composite_component *either_branch = new composite;
 
-	component *leaf_1 = new leaf;
-	component *leaf_2 = new leaf;
-	component *leaf_3 = new leaf;
+	composite_component *leaf_1 = new leaf;
+	composite_component *leaf_2 = new leaf;
+	composite_component *leaf_3 = new leaf;
 
 	either_branch->add(leaf_1);
 	either_branch->add(leaf_2);
 
-	component *other_branch = new composite;
+	composite_component *other_branch = new composite;
 	other_branch->add(leaf_3);
 
 	tree->add(either_branch);
@@ -52,23 +52,23 @@ void
 test_complex_components::
     test_complex_composite_should_generate_a_tree_and_include_other_compoments_agnostically()
 {
-	component *tree = new composite;
-	component *either_branch = new composite;
+	composite_component *tree = new composite;
+	composite_component *either_branch = new composite;
 
-	component *leaf_1 = new leaf;
-	component *leaf_2 = new leaf;
-	component *leaf_3 = new leaf;
+	composite_component *leaf_1 = new leaf;
+	composite_component *leaf_2 = new leaf;
+	composite_component *leaf_3 = new leaf;
 
 	either_branch->add(leaf_1);
 	either_branch->add(leaf_2);
 
-	component *other_branch = new composite;
+	composite_component *other_branch = new composite;
 	other_branch->add(leaf_3);
 
 	tree->add(either_branch);
 	tree->add(other_branch);
 
-	component *l = new leaf();
+	composite_component *l = new leaf();
 
 	if (tree->is_composite()) {
 		tree->add(l);
@@ -85,23 +85,23 @@ void
 test_complex_components::
     test_complex_composite_should_delete_a_compoment_from_the_tree_sucessfully()
 {
-	component *tree = new composite;
-	component *either_branch = new composite;
+	composite_component *tree = new composite;
+	composite_component *either_branch = new composite;
 
-	component *leaf_1 = new leaf;
-	component *leaf_2 = new leaf;
-	component *leaf_3 = new leaf;
+	composite_component *leaf_1 = new leaf;
+	composite_component *leaf_2 = new leaf;
+	composite_component *leaf_3 = new leaf;
 
 	either_branch->add(leaf_1);
 	either_branch->add(leaf_2);
 
-	component *other_branch = new composite;
+	composite_component *other_branch = new composite;
 	other_branch->add(leaf_3);
 
 	tree->add(either_branch);
 	tree->add(other_branch);
 
-	component *l = new leaf();
+	composite_component *l = new leaf();
 
 	if (tree->is_composite()) {
 		tree->add(l);

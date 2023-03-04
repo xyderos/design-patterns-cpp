@@ -1,7 +1,7 @@
 #include "component.h"
 
 // end objects of a composition
-class leaf : public component {
+class leaf : public composite_component {
     public:
 	leaf();
 

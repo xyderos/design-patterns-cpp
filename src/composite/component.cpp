@@ -1,14 +1,14 @@
 #include "component.h"
 
-component::component()
+composite_component::composite_component()
     : parent(nullptr)
 {
 }
 
-component::component(const component &other) = default;
+composite_component::composite_component(const composite_component &other) = default;
 
 auto
-component::operator=(const component &other) -> component &
+composite_component::operator=(const composite_component &other) -> composite_component &
 {
 	if (this == &other) {
 		return *this;
@@ -19,32 +19,32 @@ component::operator=(const component &other) -> component &
 	return *this;
 }
 
-component::~component() = default;
+composite_component::~composite_component() = default;
 
 void
-component::set_parent(component *p)
+composite_component::set_parent(composite_component *p)
 {
 	this->parent = p;
 }
 
 auto
-component::get_parent() const -> component *
+composite_component::get_parent() const -> composite_component *
 {
 	return this->parent;
 }
 
 void
-component::add(component *c)
+composite_component::add(composite_component *c)
 {
 }
 
 void
-component::remove(component *c)
+composite_component::remove(composite_component *c)
 {
 }
 
 auto
-component::is_composite() const -> bool
+composite_component::is_composite() const -> bool
 {
 	return false;
 }

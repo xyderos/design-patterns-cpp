@@ -4,7 +4,7 @@
 void
 test_simple_component::test_simple_component_should_return_a_leaf()
 {
-	component *c = new leaf();
+	composite_component *c = new leaf();
 
 	std::string expected = "leaf";
 	std::string actual = c->name();
