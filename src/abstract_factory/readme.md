@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-# Various design patterns implemented in c++ with a few notes on those
-
-## Feel free to either read allof them from master or checkout to a specific branch
-=======
 ## Purpose
 
 Create groups of objects without explicitly specifying the type.
@@ -50,4 +45,3 @@ Explicitly declare interfaces **for each product and group**. Then declare **the
 * Alternative to facade when you want to abstract the initialization process from client code
 
 * Use in conjunction with a bridge. When specific abstractions work with specific implementatios, you can encapsulate these relations to hide the complexity
->>>>>>> abstract_factory_method
