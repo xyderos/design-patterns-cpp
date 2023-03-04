@@ -1,7 +1,7 @@
 #include <cppunit/extensions/HelperMacros.h>
 
-#include "../src/apple_generator.h"
-#include "../src/orange_generator.h"
+#include "../../src/factory/apple_generator.h"
+#include "../../src/factory/orange_generator.h"
 #include "test_factory.h"
 
 void
