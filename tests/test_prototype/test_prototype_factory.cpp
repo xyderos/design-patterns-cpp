@@ -1,5 +1,5 @@
-#include "../src/prototype.h"
-#include "../src/prototype_factory.h"
+#include "../../src/prototype/prototype.h"
+#include "../../src/prototype/prototype_factory.h"
 #include "test_prototype_factory.h"
 
 void
