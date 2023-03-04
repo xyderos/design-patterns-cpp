@@ -1,3 +1,3 @@
 #include "command.h"
 
-command::~command()= default;
+command::~command() = default;

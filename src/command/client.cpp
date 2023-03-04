@@ -30,12 +30,16 @@ client::do_something() -> std::string
 
 	if (this->on_start) {
 		result.append(this->on_start->execute());
-}
+	}
 	if (this->on_finish) {
 		result.append(this->on_finish->execute());
-}
+	}
 
 	return result;
 }
 
-client::client(command *start, command *finish) : on_start(start), on_finish(finish){}
+client::client(command *start, command *finish)
+    : on_start(start)
+    , on_finish(finish)
+{
+}

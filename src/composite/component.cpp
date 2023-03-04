@@ -5,10 +5,12 @@ composite_component::composite_component()
 {
 }
 
-composite_component::composite_component(const composite_component &other) = default;
+composite_component::composite_component(
+    const composite_component &other) = default;
 
 auto
-composite_component::operator=(const composite_component &other) -> composite_component &
+composite_component::operator=(const composite_component &other)
+    -> composite_component &
 {
 	if (this == &other) {
 		return *this;
