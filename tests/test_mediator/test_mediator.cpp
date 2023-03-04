@@ -1,6 +1,6 @@
 #include <cppunit/TestAssert.h>
 
-#include "../src/coordinator.h"
+#include "../../src/mediator/coordinator.h"
 #include "test_mediator.h"
 
 void
