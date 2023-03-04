@@ -1,4 +1,4 @@
-#include "../src/singleton.h"
+#include "../../src/singleton/singleton.h"
 #include "test_singleton.h"
 
 #include <thread>
