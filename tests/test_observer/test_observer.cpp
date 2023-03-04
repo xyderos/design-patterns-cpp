@@ -1,9 +1,9 @@
 #include <cppunit/TestAssert.h>
 
-#include "../src/observe.h"
-#include "../src/observer.h"
-#include "../src/sub.h"
-#include "../src/subject.h"
+#include "../../src/observer/observe.h"
+#include "../../src/observer/observer.h"
+#include "../../src/observer/sub.h"
+#include "../../src/observer/subject.h"
 #include "test_observer.h"
 
 void
