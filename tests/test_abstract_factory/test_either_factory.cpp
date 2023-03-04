@@ -17,7 +17,7 @@ test_either_factory::test_either_factory_should_build_the_correct_objects()
 	CPPUNIT_ASSERT_EQUAL(expected_car, s->to_string());
 	CPPUNIT_ASSERT_EQUAL(expected_truck, t->to_string());
 
-	delete t;
+	//delete t;
 	delete s;
 	delete ef;
 }
