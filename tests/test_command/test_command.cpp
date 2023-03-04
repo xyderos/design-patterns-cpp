@@ -1,8 +1,8 @@
-#include "../src/business_logic.h"
-#include "../src/client.h"
-#include "../src/command.h"
-#include "../src/complex.h"
-#include "../src/simple.h"
+#include "../../src/command/business_logic.h"
+#include "../../src/command/client.h"
+#include "../../src/command/command.h"
+#include "../../src/command/complex.h"
+#include "../../src/command/simple.h"
 #include "test_command.h"
 
 void
