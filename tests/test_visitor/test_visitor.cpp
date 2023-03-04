@@ -1,10 +1,10 @@
 #include <cppunit/TestAssert.h>
 
-#include "../src/a_component.h"
-#include "../src/a_visitor.h"
-#include "../src/another_component.h"
-#include "../src/another_visitor.h"
-#include "../src/component.h"
+#include "../../src/visitor/a_component.h"
+#include "../../src/visitor/a_visitor.h"
+#include "../../src/visitor/another_component.h"
+#include "../../src/visitor/another_visitor.h"
+#include "../../src/visitor/component.h"
 #include "test_visitor.h"
 
 #include <algorithm>
