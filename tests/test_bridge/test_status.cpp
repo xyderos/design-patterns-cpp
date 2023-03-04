@@ -1,9 +1,9 @@
 #include <cppunit/extensions/HelperMacros.h>
 
-#include "../src/freebsd.h"
-#include "../src/os.h"
-#include "../src/status.h"
-#include "../src/ubuntu.h"
+#include "../../src/bridge/freebsd.h"
+#include "../../src/bridge/os.h"
+#include "../../src/bridge/status.h"
+#include "../../src/bridge/ubuntu.h"
 #include "test_status.h"
 
 void
