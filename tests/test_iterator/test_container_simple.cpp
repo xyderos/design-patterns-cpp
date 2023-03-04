@@ -1,20 +1,20 @@
 #include <cppunit/TestAssert.h>
 
-#include "../src/container.h"
-#include "../src/data.h"
-#include "../src/iterator.h"
-#include "test_container_complex.h"
+#include "../../src/iterator/container.h"
+#include "../../src/iterator/iterator.h"
+#include "test_container_simple.h"
 
 #include <algorithm>
 
 #define MAX 10
+
 void
-test_container_complex::test_container_adding_complex_items_should_be_okay()
+test_container_simple::test_container_adding_simple_items_should_be_okay()
 {
-	container<data> c;
+	container<int> c;
 
 	for (int i = 0; i < MAX; i++) {
-		c.add(data(i));
+		c.add(i);
 	}
 
 	auto *it = c.make_iterator();
