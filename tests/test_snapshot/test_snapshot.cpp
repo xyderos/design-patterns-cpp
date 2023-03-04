@@ -1,8 +1,8 @@
 #include <cppunit/TestAssert.h>
 
-#include "../src/caretaker.h"
-#include "../src/originator.h"
-#include "../src/snapshot.h"
+#include "../../src/snapshot/caretaker.h"
+#include "../../src/snapshot/originator.h"
+#include "../../src/snapshot/snapshot.h"
 #include "test_snapshot.h"
 
 void
