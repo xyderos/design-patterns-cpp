@@ -25,5 +25,5 @@ test_proxy::test_proxy_proxy_subject_should_execute_its_own_common()
 
 	CPPUNIT_ASSERT_EQUAL(expected, f->common());
 
-	delete r;
+	delete f;
 }

@@ -26,4 +26,6 @@ test_container_complex::test_container_adding_complex_items_should_be_okay()
 	}
 
 	CPPUNIT_ASSERT_EQUAL(counter, MAX);
+
+	delete it;
 }

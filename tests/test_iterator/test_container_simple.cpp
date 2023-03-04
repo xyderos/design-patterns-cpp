@@ -26,4 +26,6 @@ test_container_simple::test_container_adding_simple_items_should_be_okay()
 	}
 
 	CPPUNIT_ASSERT_EQUAL(counter, MAX);
+
+	delete it;
 }
